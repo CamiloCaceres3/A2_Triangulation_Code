@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glew"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glew"
 		},
 		{
 			"name" : "3rd_glew_LIB_DEPENDS",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glew"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glew"
 		},
 		{
 			"name" : "3rd_glog_BINARY_DIR",
@@ -47,7 +47,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glog"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glog"
 		},
 		{
 			"name" : "3rd_glog_SOURCE_DIR",
@@ -59,10 +59,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glog"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glog"
 		},
 		{
-			"name" : "A2_Triangulation_Code_BINARY_DIR",
+			"name" : "A2_collab_working_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -71,10 +71,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)"
 		},
 		{
-			"name" : "A2_Triangulation_Code_SOURCE_DIR",
+			"name" : "A2_collab_working_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working"
 		},
 		{
 			"name" : "BUILD_SHARED_LIBS",
@@ -263,7 +263,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)"
+			"value" : "c:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -751,7 +751,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -955,7 +955,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/install/x64-Debug (default)"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1203,7 +1203,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "A2_Triangulation_Code"
+			"value" : "A2_collab_working"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1603,7 +1603,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/cminpack"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/cminpack"
 		},
 		{
 			"name" : "CMINPACK_SOURCE_DIR",
@@ -1615,7 +1615,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/cminpack"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/cminpack"
 		},
 		{
 			"name" : "CMINPACK_SOVERSION",
@@ -1675,7 +1675,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glfw"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glfw"
 		},
 		{
 			"name" : "GLFW_BUILD_DOCS",
@@ -1735,7 +1735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glfw"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glfw"
 		},
 		{
 			"name" : "GLFW_USE_HYBRID_HPG",
@@ -1827,7 +1827,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/Triangulation"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Triangulation"
 		},
 		{
 			"name" : "Triangulation_SOURCE_DIR",
@@ -1839,7 +1839,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/Triangulation"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/Triangulation"
 		},
 		{
 			"name" : "Tutorial_NonlinearLeastSquares_BINARY_DIR",
@@ -1851,7 +1851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares"
 		},
 		{
 			"name" : "Tutorial_NonlinearLeastSquares_SOURCE_DIR",
@@ -1863,7 +1863,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/Tutorial_NonlinearLeastSquares"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/Tutorial_NonlinearLeastSquares"
 		},
 		{
 			"name" : "USE_BLAS",
@@ -1899,7 +1899,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/install/x64-Debug (default)"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)"
 		},
 		{
 			"name" : "easy3d_core_BINARY_DIR",
@@ -1911,7 +1911,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/core"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/core"
 		},
 		{
 			"name" : "easy3d_core_LIB_DEPENDS",
@@ -1935,7 +1935,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/core"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/core"
 		},
 		{
 			"name" : "easy3d_fileio_BINARY_DIR",
@@ -1947,7 +1947,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/fileio"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/fileio"
 		},
 		{
 			"name" : "easy3d_fileio_LIB_DEPENDS",
@@ -1971,7 +1971,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/fileio"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/fileio"
 		},
 		{
 			"name" : "easy3d_optimizer_BINARY_DIR",
@@ -1983,7 +1983,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/optimizer"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/optimizer"
 		},
 		{
 			"name" : "easy3d_optimizer_LIB_DEPENDS",
@@ -2007,7 +2007,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/optimizer"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/optimizer"
 		},
 		{
 			"name" : "easy3d_util_BINARY_DIR",
@@ -2019,7 +2019,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/util"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/util"
 		},
 		{
 			"name" : "easy3d_util_LIB_DEPENDS",
@@ -2043,7 +2043,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/util"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/util"
 		},
 		{
 			"name" : "easy3d_viewer_BINARY_DIR",
@@ -2055,7 +2055,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/viewer"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/viewer"
 		},
 		{
 			"name" : "easy3d_viewer_LIB_DEPENDS",
@@ -2079,7 +2079,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/viewer"
+			"value" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/viewer"
 		}
 	],
 	"kind" : "cache",

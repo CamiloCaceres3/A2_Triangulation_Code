@@ -112,15 +112,15 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glfw/include"
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glfw/include"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glfw/src"
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glfw/src"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glfw/src"
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glfw/src"
 				}
 			],
 			"language" : "C",

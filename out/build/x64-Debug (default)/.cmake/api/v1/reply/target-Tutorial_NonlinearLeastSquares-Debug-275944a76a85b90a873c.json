@@ -73,15 +73,15 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code"
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)"
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/3rd_party/glog/.."
+					"path" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glog/.."
 				}
 			],
 			"language" : "CXX",
@@ -95,19 +95,19 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "3rd_cminpack::@e3843e3c45493f70bc82"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "3rd_glog::@d3cd30be08f891a1b326"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "easy3d_optimizer::@9f3a39959e6843a55c76"
+			"id" : "3rd_cminpack::@e3843e3c45493f70bc82"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "easy3d_util::@a5cd75459df24341c131"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "easy3d_optimizer::@9f3a39959e6843a55c76"
 		}
 	],
 	"id" : "Tutorial_NonlinearLeastSquares::@bf142b3253add2786765",

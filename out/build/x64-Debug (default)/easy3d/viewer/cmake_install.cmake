@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/easy3d/viewer
+# Install script for directory: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/viewer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/install/x64-Debug (default)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

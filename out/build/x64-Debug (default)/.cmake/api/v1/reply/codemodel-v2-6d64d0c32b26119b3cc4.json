@@ -266,7 +266,7 @@
 						1,
 						8
 					],
-					"name" : "A2_Triangulation_Code"
+					"name" : "A2_collab_working"
 				},
 				{
 					"directoryIndexes" : 
@@ -408,77 +408,77 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "3rd_cminpack::@e3843e3c45493f70bc82",
-					"jsonFile" : "target-3rd_cminpack-Debug-457fa6d7024041716907.json",
+					"jsonFile" : "target-3rd_cminpack-Debug-f1cf778b7d77d9561a1d.json",
 					"name" : "3rd_cminpack",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "3rd_glew::@3782b4e7c4f9d2ba2c57",
-					"jsonFile" : "target-3rd_glew-Debug-022993087b0ac8a95fe5.json",
+					"jsonFile" : "target-3rd_glew-Debug-4a9bf4eeebdcd93d5663.json",
 					"name" : "3rd_glew",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "3rd_glfw::@82eb073f23ca4a565ec2",
-					"jsonFile" : "target-3rd_glfw-Debug-b84e1ace2ed1fff67f53.json",
+					"jsonFile" : "target-3rd_glfw-Debug-b9cdd8508411b5f49543.json",
 					"name" : "3rd_glfw",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "3rd_glog::@d3cd30be08f891a1b326",
-					"jsonFile" : "target-3rd_glog-Debug-e093b9b2436bd3cf4eb1.json",
+					"jsonFile" : "target-3rd_glog-Debug-e7b9443ff948daa735d3.json",
 					"name" : "3rd_glog",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 14,
 					"id" : "Triangulation::@1a1c97db115fb7e6d449",
-					"jsonFile" : "target-Triangulation-Debug-eb06f1d3160e65b5a77c.json",
+					"jsonFile" : "target-Triangulation-Debug-cb5b322c52391bc23042.json",
 					"name" : "Triangulation",
 					"projectIndex" : 10
 				},
 				{
 					"directoryIndex" : 15,
 					"id" : "Tutorial_NonlinearLeastSquares::@bf142b3253add2786765",
-					"jsonFile" : "target-Tutorial_NonlinearLeastSquares-Debug-3f8b484ea2cc754a9038.json",
+					"jsonFile" : "target-Tutorial_NonlinearLeastSquares-Debug-275944a76a85b90a873c.json",
 					"name" : "Tutorial_NonlinearLeastSquares",
 					"projectIndex" : 11
 				},
 				{
 					"directoryIndex" : 9,
 					"id" : "easy3d_core::@cb35a92cddfea1372b37",
-					"jsonFile" : "target-easy3d_core-Debug-70958c551b89f67461fc.json",
+					"jsonFile" : "target-easy3d_core-Debug-ba1088a9c4f1bd057afa.json",
 					"name" : "easy3d_core",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 10,
 					"id" : "easy3d_fileio::@1ac0250c1f979f6df208",
-					"jsonFile" : "target-easy3d_fileio-Debug-f418bb5a05b6432d2618.json",
+					"jsonFile" : "target-easy3d_fileio-Debug-d6203b7b0b5939f11e2d.json",
 					"name" : "easy3d_fileio",
 					"projectIndex" : 6
 				},
 				{
 					"directoryIndex" : 13,
 					"id" : "easy3d_optimizer::@9f3a39959e6843a55c76",
-					"jsonFile" : "target-easy3d_optimizer-Debug-516edd60273b08c04f40.json",
+					"jsonFile" : "target-easy3d_optimizer-Debug-5ec1aacc25e66556e7fd.json",
 					"name" : "easy3d_optimizer",
 					"projectIndex" : 9
 				},
 				{
 					"directoryIndex" : 11,
 					"id" : "easy3d_util::@a5cd75459df24341c131",
-					"jsonFile" : "target-easy3d_util-Debug-fb0e794ac65b238b015c.json",
+					"jsonFile" : "target-easy3d_util-Debug-5eb941b36d2cc421e0b2.json",
 					"name" : "easy3d_util",
 					"projectIndex" : 7
 				},
 				{
 					"directoryIndex" : 12,
 					"id" : "easy3d_viewer::@e94df83b7addc850682d",
-					"jsonFile" : "target-easy3d_viewer-Debug-538b0cf3fc6c9bb572cc.json",
+					"jsonFile" : "target-easy3d_viewer-Debug-13f9052fad25f1ec000c.json",
 					"name" : "easy3d_viewer",
 					"projectIndex" : 8
 				}
@@ -488,8 +488,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code/out/build/x64-Debug (default)",
-		"source" : "C:/Users/Camicace/Documents/Geo1016/A2_Triangulation (1)/A2_Triangulation_Code"
+		"build" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)",
+		"source" : "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working"
 	},
 	"version" : 
 	{
