@@ -29,6 +29,14 @@
 
 using namespace easy3d;
 
+/// Function to calculate distance between centroid and input point
+float dist_c(vec3 point, vec3 centroid)
+{
+    vec3 diff = point - centroid;
+    float dist = diff.length();
+    return dist;
+}
+
 
 /// convert a 3 by 3 matrix of type 'Matrix<double>' to mat3
 mat3 to_mat3(Matrix<double> &M) {
@@ -242,24 +250,45 @@ bool Triangulation::triangulation(
         vec3 V = { points_0[i][0] - centroid_0[0], points_0[i][1] - centroid_0[1], 1 };
         points_0T.push_back(V);
     }
-    std::cout << "points_0T: " << points_0T << std::endl;
-    std::cout << "points_0: " << points_0[0] << std::endl;
+    //std::cout << "points_0T: " << points_0T << std::endl;
+    //std::cout << "points_0: " << points_0[0] << std::endl;
     
+
+    float sum_mean_dist0 = 0;
+
+    for (int i = 0; i < points_0T.size(); i++)
+    {
+        sum_mean_dist0 = sum_mean_dist0 + (dist_c(points_0T[i], centroid_0));
+    }
+
+    //std::cout << "sum dist0" << sum_mean_dist0 << std::endl;
+
+    float mean_dist0 = sum_mean_dist0 / points_0T.size();
+
     // Initialize scaling matrix
-    mat3 scaling{ (float) sqrt(2.0),0.0,0.0,
-                   0.0,(float) sqrt(2.0),0.0,
+    mat3 scaling{ ((float) sqrt(2.0)/mean_dist0),0.0,0.0,
+                   0.0,((float)sqrt(2.0) / mean_dist0),0.0,
                    0.0,0.0,1.0 };
     std::cout << "scaling matrix: " << scaling << std::endl;
 
+
+
     //Scaling of W 
     //For first point (test)
-    std::cout << "scaling one of the points_0T: " << scaling * points_0T[0]  << std::endl;
+    //std::cout << "scaling one of the points_0T: " << scaling * points_0T[0]  << std::endl;
     //For all points
+
+    std::vector<vec3> points_0scaled;
+
     for (int i = 0; i < points_0T.size(); i++)
     {
-        scaling * points_0T[i];
+        vec3 scaled_point = scaling * points_0T[i];
+        points_0scaled.push_back(scaled_point);
     }
-    std::cout << "scaling of all points_0: " << points_0T << std::endl;
+    std::cout << "scaling of all points_0: " << points_0scaled << std::endl;
+
+    //std::cout << "try func dist: " << dist_c(points_0T[0], centroid_0) << std::endl;
+
 
 
 
