@@ -1,7 +1,7 @@
-prefix=C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)
+prefix=C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)
 exec_prefix=${prefix}
-includedir=C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)/include
-libdir=C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)/lib
+includedir=C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)/include
+libdir=C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input

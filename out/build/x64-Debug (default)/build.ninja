@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: A2_collab_working
+# Project: A2_Triangulation_Code
 # Configurations: Debug
 # =============================================================================
 
@@ -39,7 +39,7 @@ include CMakeFiles\rules.ninja
 # Utility command for install/local
 
 build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -51,7 +51,7 @@ build install\local: phony CMakeFiles\install\local.util
 # Utility command for install
 
 build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -63,7 +63,7 @@ build install: phony CMakeFiles\install.util
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -74,7 +74,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -89,7 +89,7 @@ build list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/CMakeLists.txt
 # =============================================================================
 
 
@@ -97,7 +97,7 @@ build list_install_components: phony
 # Utility command for install/local
 
 build 3rd_party\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -109,7 +109,7 @@ build 3rd_party\install\local: phony 3rd_party\CMakeFiles\install\local.util
 # Utility command for install
 
 build 3rd_party\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -121,7 +121,7 @@ build 3rd_party\install: phony 3rd_party\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build 3rd_party\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -132,7 +132,7 @@ build 3rd_party\edit_cache: phony 3rd_party\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build 3rd_party\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -147,7 +147,7 @@ build 3rd_party\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/CMakeLists.txt
 # =============================================================================
 
 
@@ -197,7 +197,7 @@ build lib\3rd_glew.lib: C_STATIC_LIBRARY_LINKER__3rd_glew_Debug 3rd_party\glew\C
 # Utility command for install/local
 
 build 3rd_party\glew\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\glew\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -209,7 +209,7 @@ build 3rd_party\glew\install\local: phony 3rd_party\glew\CMakeFiles\install\loca
 # Utility command for install
 
 build 3rd_party\glew\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\glew\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -221,7 +221,7 @@ build 3rd_party\glew\install: phony 3rd_party\glew\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build 3rd_party\glew\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -232,7 +232,7 @@ build 3rd_party\glew\edit_cache: phony 3rd_party\glew\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build 3rd_party\glew\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glew" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -241,7 +241,7 @@ build 3rd_party\glew\rebuild_cache: phony 3rd_party\glew\CMakeFiles\rebuild_cach
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/CMakeLists.txt
 # =============================================================================
 
 
@@ -249,7 +249,7 @@ build 3rd_party\glew\rebuild_cache: phony 3rd_party\glew\CMakeFiles\rebuild_cach
 # Utility command for install/local
 
 build 3rd_party\glfw\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\glfw\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -261,7 +261,7 @@ build 3rd_party\glfw\install\local: phony 3rd_party\glfw\CMakeFiles\install\loca
 # Utility command for install
 
 build 3rd_party\glfw\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\glfw\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -273,7 +273,7 @@ build 3rd_party\glfw\install: phony 3rd_party\glfw\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build 3rd_party\glfw\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -284,7 +284,7 @@ build 3rd_party\glfw\edit_cache: phony 3rd_party\glfw\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build 3rd_party\glfw\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -299,7 +299,7 @@ build 3rd_party\glfw\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/glfw/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/glfw/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -469,7 +469,7 @@ build lib\3rd_glfw.lib: C_STATIC_LIBRARY_LINKER__3rd_glfw_Debug 3rd_party\glfw\s
 # Utility command for install/local
 
 build 3rd_party\glfw\src\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\glfw\src\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -481,7 +481,7 @@ build 3rd_party\glfw\src\install\local: phony 3rd_party\glfw\src\CMakeFiles\inst
 # Utility command for install
 
 build 3rd_party\glfw\src\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\glfw\src\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -493,7 +493,7 @@ build 3rd_party\glfw\src\install: phony 3rd_party\glfw\src\CMakeFiles\install.ut
 # Utility command for edit_cache
 
 build 3rd_party\glfw\src\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -504,7 +504,7 @@ build 3rd_party\glfw\src\edit_cache: phony 3rd_party\glfw\src\CMakeFiles\edit_ca
 # Utility command for rebuild_cache
 
 build 3rd_party\glfw\src\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glfw\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -519,7 +519,7 @@ build 3rd_party\glfw\src\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/CMakeLists.txt
 # =============================================================================
 
 
@@ -527,7 +527,7 @@ build 3rd_party\glfw\src\list_install_components: phony
 # Utility command for install/local
 
 build 3rd_party\glog\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\glog\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -539,7 +539,7 @@ build 3rd_party\glog\install\local: phony 3rd_party\glog\CMakeFiles\install\loca
 # Utility command for install
 
 build 3rd_party\glog\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\glog\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -551,7 +551,7 @@ build 3rd_party\glog\install: phony 3rd_party\glog\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build 3rd_party\glog\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -597,7 +597,7 @@ build lib\3rd_glog.lib: CXX_STATIC_LIBRARY_LINKER__3rd_glog_Debug 3rd_party\glog
 # Utility command for rebuild_cache
 
 build 3rd_party\glog\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\glog" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -612,7 +612,7 @@ build 3rd_party\glog\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -1039,7 +1039,7 @@ build lib\3rd_cminpack.lib: C_STATIC_LIBRARY_LINKER__3rd_cminpack_Debug 3rd_part
 # Utility command for install/local
 
 build 3rd_party\cminpack\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\cminpack\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1051,7 +1051,7 @@ build 3rd_party\cminpack\install\local: phony 3rd_party\cminpack\CMakeFiles\inst
 # Utility command for install
 
 build 3rd_party\cminpack\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\cminpack\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1063,7 +1063,7 @@ build 3rd_party\cminpack\install: phony 3rd_party\cminpack\CMakeFiles\install.ut
 # Utility command for edit_cache
 
 build 3rd_party\cminpack\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1074,7 +1074,7 @@ build 3rd_party\cminpack\edit_cache: phony 3rd_party\cminpack\CMakeFiles\edit_ca
 # Utility command for rebuild_cache
 
 build 3rd_party\cminpack\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1089,7 +1089,7 @@ build 3rd_party\cminpack\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/cminpack/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/cminpack/CMakeLists.txt
 # =============================================================================
 
 
@@ -1097,7 +1097,7 @@ build 3rd_party\cminpack\list_install_components: phony
 # Utility command for install/local
 
 build 3rd_party\cminpack\cmake\CMakeFiles\install\local.util: CUSTOM_COMMAND 3rd_party\cminpack\cmake\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1109,7 +1109,7 @@ build 3rd_party\cminpack\cmake\install\local: phony 3rd_party\cminpack\cmake\CMa
 # Utility command for install
 
 build 3rd_party\cminpack\cmake\CMakeFiles\install.util: CUSTOM_COMMAND 3rd_party\cminpack\cmake\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1121,7 +1121,7 @@ build 3rd_party\cminpack\cmake\install: phony 3rd_party\cminpack\cmake\CMakeFile
 # Utility command for edit_cache
 
 build 3rd_party\cminpack\cmake\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1132,7 +1132,7 @@ build 3rd_party\cminpack\cmake\edit_cache: phony 3rd_party\cminpack\cmake\CMakeF
 # Utility command for rebuild_cache
 
 build 3rd_party\cminpack\cmake\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\3rd_party\cminpack\cmake" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1147,7 +1147,7 @@ build 3rd_party\cminpack\cmake\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/CMakeLists.txt
 # =============================================================================
 
 
@@ -1155,7 +1155,7 @@ build 3rd_party\cminpack\cmake\list_install_components: phony
 # Utility command for install/local
 
 build easy3d\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1167,7 +1167,7 @@ build easy3d\install\local: phony easy3d\CMakeFiles\install\local.util
 # Utility command for install
 
 build easy3d\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1179,7 +1179,7 @@ build easy3d\install: phony easy3d\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1190,7 +1190,7 @@ build easy3d\edit_cache: phony easy3d\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build easy3d\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1205,7 +1205,7 @@ build easy3d\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -1280,7 +1280,7 @@ build lib\easy3d_core.lib: CXX_STATIC_LIBRARY_LINKER__easy3d_core_Debug easy3d\c
 # Utility command for install/local
 
 build easy3d\core\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\core\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1292,7 +1292,7 @@ build easy3d\core\install\local: phony easy3d\core\CMakeFiles\install\local.util
 # Utility command for install
 
 build easy3d\core\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\core\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1304,7 +1304,7 @@ build easy3d\core\install: phony easy3d\core\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\core\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1315,7 +1315,7 @@ build easy3d\core\edit_cache: phony easy3d\core\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build easy3d\core\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\core" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1330,7 +1330,7 @@ build easy3d\core\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -1343,7 +1343,7 @@ build easy3d\core\list_install_components: phony
 build cmake_object_order_depends_target_easy3d_fileio: phony || cmake_object_order_depends_target_3rd_glog cmake_object_order_depends_target_easy3d_core cmake_object_order_depends_target_easy3d_util
 
 build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\point_cloud_io.cpp.obj: CXX_COMPILER__easy3d_fileio_Debug ..\..\..\easy3d\fileio\point_cloud_io.cpp || cmake_object_order_depends_target_easy3d_fileio
-  DEFINES = -DEASY3D_RESOURCES_DIR="\"C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/resources\"" -D_CRT_SECURE_NO_DEPRECATE
+  DEFINES = -DEASY3D_RESOURCES_DIR=\"C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/resources\" -D_CRT_SECURE_NO_DEPRECATE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\ -I. -I..\..\..\3rd_party\LAStools\LASzip\src -I..\..\..\3rd_party\LAStools\LASlib\inc -I..\..\..\3rd_party\glog\..
   OBJECT_DIR = easy3d\fileio\CMakeFiles\easy3d_fileio.dir
@@ -1352,7 +1352,7 @@ build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\point_cloud_io.cpp.obj: CXX_COM
   TARGET_PDB = lib\easy3d_fileio.pdb
 
 build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\image_io.cpp.obj: CXX_COMPILER__easy3d_fileio_Debug ..\..\..\easy3d\fileio\image_io.cpp || cmake_object_order_depends_target_easy3d_fileio
-  DEFINES = -DEASY3D_RESOURCES_DIR="\"C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/resources\"" -D_CRT_SECURE_NO_DEPRECATE
+  DEFINES = -DEASY3D_RESOURCES_DIR=\"C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/resources\" -D_CRT_SECURE_NO_DEPRECATE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\ -I. -I..\..\..\3rd_party\LAStools\LASzip\src -I..\..\..\3rd_party\LAStools\LASlib\inc -I..\..\..\3rd_party\glog\..
   OBJECT_DIR = easy3d\fileio\CMakeFiles\easy3d_fileio.dir
@@ -1361,7 +1361,7 @@ build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\image_io.cpp.obj: CXX_COMPILER_
   TARGET_PDB = lib\easy3d_fileio.pdb
 
 build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\surface_mesh_io.cpp.obj: CXX_COMPILER__easy3d_fileio_Debug ..\..\..\easy3d\fileio\surface_mesh_io.cpp || cmake_object_order_depends_target_easy3d_fileio
-  DEFINES = -DEASY3D_RESOURCES_DIR="\"C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/resources\"" -D_CRT_SECURE_NO_DEPRECATE
+  DEFINES = -DEASY3D_RESOURCES_DIR=\"C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/resources\" -D_CRT_SECURE_NO_DEPRECATE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\ -I. -I..\..\..\3rd_party\LAStools\LASzip\src -I..\..\..\3rd_party\LAStools\LASlib\inc -I..\..\..\3rd_party\glog\..
   OBJECT_DIR = easy3d\fileio\CMakeFiles\easy3d_fileio.dir
@@ -1370,7 +1370,7 @@ build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\surface_mesh_io.cpp.obj: CXX_CO
   TARGET_PDB = lib\easy3d_fileio.pdb
 
 build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\surface_mesh_io_obj.cpp.obj: CXX_COMPILER__easy3d_fileio_Debug ..\..\..\easy3d\fileio\surface_mesh_io_obj.cpp || cmake_object_order_depends_target_easy3d_fileio
-  DEFINES = -DEASY3D_RESOURCES_DIR="\"C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/resources\"" -D_CRT_SECURE_NO_DEPRECATE
+  DEFINES = -DEASY3D_RESOURCES_DIR=\"C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/resources\" -D_CRT_SECURE_NO_DEPRECATE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\ -I. -I..\..\..\3rd_party\LAStools\LASzip\src -I..\..\..\3rd_party\LAStools\LASlib\inc -I..\..\..\3rd_party\glog\..
   OBJECT_DIR = easy3d\fileio\CMakeFiles\easy3d_fileio.dir
@@ -1379,7 +1379,7 @@ build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\surface_mesh_io_obj.cpp.obj: CX
   TARGET_PDB = lib\easy3d_fileio.pdb
 
 build easy3d\fileio\CMakeFiles\easy3d_fileio.dir\resources.cpp.obj: CXX_COMPILER__easy3d_fileio_Debug ..\..\..\easy3d\fileio\resources.cpp || cmake_object_order_depends_target_easy3d_fileio
-  DEFINES = -DEASY3D_RESOURCES_DIR="\"C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/resources\"" -D_CRT_SECURE_NO_DEPRECATE
+  DEFINES = -DEASY3D_RESOURCES_DIR=\"C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/resources\" -D_CRT_SECURE_NO_DEPRECATE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   INCLUDES = -I..\..\..\ -I. -I..\..\..\3rd_party\LAStools\LASzip\src -I..\..\..\3rd_party\LAStools\LASlib\inc -I..\..\..\3rd_party\glog\..
   OBJECT_DIR = easy3d\fileio\CMakeFiles\easy3d_fileio.dir
@@ -1410,7 +1410,7 @@ build lib\easy3d_fileio.lib: CXX_STATIC_LIBRARY_LINKER__easy3d_fileio_Debug easy
 # Utility command for install/local
 
 build easy3d\fileio\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\fileio\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1422,7 +1422,7 @@ build easy3d\fileio\install\local: phony easy3d\fileio\CMakeFiles\install\local.
 # Utility command for install
 
 build easy3d\fileio\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\fileio\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1434,7 +1434,7 @@ build easy3d\fileio\install: phony easy3d\fileio\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\fileio\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1445,7 +1445,7 @@ build easy3d\fileio\edit_cache: phony easy3d\fileio\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build easy3d\fileio\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\fileio" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1460,7 +1460,7 @@ build easy3d\fileio\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d/CMakeLists.txt
 # =============================================================================
 
 
@@ -1468,7 +1468,7 @@ build easy3d\fileio\list_install_components: phony
 # Utility command for rebuild_cache
 
 build easy3d\util\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1561,7 +1561,7 @@ build lib\easy3d_util.lib: CXX_STATIC_LIBRARY_LINKER__easy3d_util_Debug easy3d\u
 # Utility command for install/local
 
 build easy3d\util\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\util\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1573,7 +1573,7 @@ build easy3d\util\install\local: phony easy3d\util\CMakeFiles\install\local.util
 # Utility command for install
 
 build easy3d\util\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\util\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1585,7 +1585,7 @@ build easy3d\util\install: phony easy3d\util\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\util\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\util" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1599,7 +1599,7 @@ build easy3d\util\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -1886,7 +1886,7 @@ build lib\easy3d_viewer.lib: CXX_STATIC_LIBRARY_LINKER__easy3d_viewer_Debug easy
 # Utility command for install/local
 
 build easy3d\viewer\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\viewer\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1898,7 +1898,7 @@ build easy3d\viewer\install\local: phony easy3d\viewer\CMakeFiles\install\local.
 # Utility command for install
 
 build easy3d\viewer\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\viewer\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1910,7 +1910,7 @@ build easy3d\viewer\install: phony easy3d\viewer\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\viewer\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1921,7 +1921,7 @@ build easy3d\viewer\edit_cache: phony easy3d\viewer\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build easy3d\viewer\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\viewer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1936,7 +1936,7 @@ build easy3d\viewer\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/easy3d/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d/CMakeLists.txt
 # =============================================================================
 
 
@@ -1944,7 +1944,7 @@ build easy3d\viewer\list_install_components: phony
 # Utility command for install/local
 
 build easy3d\optimizer\CMakeFiles\install\local.util: CUSTOM_COMMAND easy3d\optimizer\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1956,7 +1956,7 @@ build easy3d\optimizer\install\local: phony easy3d\optimizer\CMakeFiles\install\
 # Utility command for install
 
 build easy3d\optimizer\CMakeFiles\install.util: CUSTOM_COMMAND easy3d\optimizer\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1968,7 +1968,7 @@ build easy3d\optimizer\install: phony easy3d\optimizer\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build easy3d\optimizer\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -2015,7 +2015,7 @@ build lib\easy3d_optimizer.lib: CXX_STATIC_LIBRARY_LINKER__easy3d_optimizer_Debu
 # Utility command for rebuild_cache
 
 build easy3d\optimizer\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\easy3d\optimizer" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -2030,7 +2030,7 @@ build easy3d\optimizer\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/CMakeLists.txt
 # =============================================================================
 
 
@@ -2038,7 +2038,7 @@ build easy3d\optimizer\list_install_components: phony
 # Utility command for install/local
 
 build Triangulation\CMakeFiles\install\local.util: CUSTOM_COMMAND Triangulation\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -2050,7 +2050,7 @@ build Triangulation\install\local: phony Triangulation\CMakeFiles\install\local.
 # Utility command for install
 
 build Triangulation\CMakeFiles\install.util: CUSTOM_COMMAND Triangulation\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -2062,7 +2062,7 @@ build Triangulation\install: phony Triangulation\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build Triangulation\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -2138,7 +2138,7 @@ build bin\Triangulation.exe: CXX_EXECUTABLE_LINKER__Triangulation_Debug Triangul
 # Utility command for rebuild_cache
 
 build Triangulation\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Triangulation" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -2153,7 +2153,7 @@ build Triangulation\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/CMakeLists.txt
+# C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -2199,7 +2199,7 @@ build bin\Tutorial_NonlinearLeastSquares.exe: CXX_EXECUTABLE_LINKER__Tutorial_No
 # Utility command for install/local
 
 build Tutorial_NonlinearLeastSquares\CMakeFiles\install\local.util: CUSTOM_COMMAND Tutorial_NonlinearLeastSquares\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -2211,7 +2211,7 @@ build Tutorial_NonlinearLeastSquares\install\local: phony Tutorial_NonlinearLeas
 # Utility command for install
 
 build Tutorial_NonlinearLeastSquares\CMakeFiles\install.util: CUSTOM_COMMAND Tutorial_NonlinearLeastSquares\all
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -2223,7 +2223,7 @@ build Tutorial_NonlinearLeastSquares\install: phony Tutorial_NonlinearLeastSquar
 # Utility command for edit_cache
 
 build Tutorial_NonlinearLeastSquares\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -2234,7 +2234,7 @@ build Tutorial_NonlinearLeastSquares\edit_cache: phony Tutorial_NonlinearLeastSq
 # Utility command for rebuild_cache
 
 build Tutorial_NonlinearLeastSquares\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working" -B"C:\Users\dj_do\OneDrive\GEOMATICS\GEO1016 Photogrammetry\Assignments\A2_collab_working\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)\Tutorial_NonlinearLeastSquares" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code -B"C:\Users\Camicace\source\repos\A1_Calibration_Code\A2_Triangulation_Code\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -2300,112 +2300,112 @@ build easy3d_viewer.lib: phony lib\easy3d_viewer.lib
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)
 
 build all: phony 3rd_party\all easy3d\all Triangulation\all Tutorial_NonlinearLeastSquares\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party
 
 build 3rd_party\all: phony 3rd_party\glew\all 3rd_party\glfw\all 3rd_party\glog\all 3rd_party\cminpack\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/cminpack
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/cminpack
 
 build 3rd_party\cminpack\all: phony lib\3rd_cminpack.lib 3rd_party\cminpack\cmake\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/cminpack/cmake
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/cminpack/cmake
 
 build 3rd_party\cminpack\cmake\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glew
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glew
 
 build 3rd_party\glew\all: phony lib\3rd_glew.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glfw
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glfw
 
 build 3rd_party\glfw\all: phony 3rd_party\glfw\src\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glfw/src
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glfw/src
 
 build 3rd_party\glfw\src\all: phony lib\3rd_glfw.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/glog
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/glog
 
 build 3rd_party\glog\all: phony lib\3rd_glog.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Triangulation
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/Triangulation
 
 build Triangulation\all: phony bin\Triangulation.exe
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares
 
 build Tutorial_NonlinearLeastSquares\all: phony bin\Tutorial_NonlinearLeastSquares.exe
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d
 
 build easy3d\all: phony easy3d\core\all easy3d\fileio\all easy3d\util\all easy3d\viewer\all easy3d\optimizer\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/core
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/core
 
 build easy3d\core\all: phony lib\easy3d_core.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/fileio
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/fileio
 
 build easy3d\fileio\all: phony lib\easy3d_fileio.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/optimizer
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/optimizer
 
 build easy3d\optimizer\all: phony lib\easy3d_optimizer.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/util
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/util
 
 build easy3d\util\all: phony lib\easy3d_util.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/viewer
+# Folder: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/viewer
 
 build easy3d\viewer\all: phony lib\easy3d_viewer.lib
 

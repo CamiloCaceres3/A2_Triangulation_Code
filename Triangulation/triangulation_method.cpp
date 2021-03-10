@@ -37,9 +37,67 @@ float dist_c(vec3 point, vec3 centroid)
     return dist;
 }
 
+/// Normalize data points
+std::vector<vec3> points_normalize(std::vector<vec3> points)
+{
+    double sum_x = 0;
+    double sum_y = 0;
+    for (int i = 0; i < points.size(); i++)
+    {
+        sum_x = sum_x + points[i][0];
+        sum_y = sum_y + points[i][1];
+    }
+    float mean_x = sum_x / points.size();
+    float mean_y = sum_y / points.size();
+    //std::cout << "mean x0 " << mean_x0 << std::endl;
+    //std::cout << "mean y0: " << mean_y0 << std::endl;
+    vec3 centroid = { mean_x, mean_y, 1.0 };
+    //std::cout << "Centroid_0: " << centroid_0 << std::endl;
+
+    //Translation of W by centroid
+    // "" for points_0
+    std::vector<vec3> points_T;
+    for (int i = 0; i < points.size(); i++)
+    {
+        vec3 V = { points[i][0] - centroid[0], points[i][1] - centroid[1], 1 };
+        points_T.push_back(V);
+    }
+    //std::cout << "points_0T: " << points_0T << std::endl;
+    //std::cout << "points_0: " << points_0[0] << std::endl;
+    float sum_mean_dist = 0;
+    for (int i = 0; i < points_T.size(); i++)
+    {
+        sum_mean_dist = sum_mean_dist + (dist_c(points_T[i], centroid));
+    }
+    //std::cout << "sum dist0" << sum_mean_dist0 << std::endl;
+
+    float mean_dist = sum_mean_dist / points_T.size();
+
+    // Initialize scaling matrix
+    mat3 scaling{ ((float)sqrt(2.0) / mean_dist),0.0,0.0,
+                   0.0,((float)sqrt(2.0) / mean_dist),0.0,
+                   0.0,0.0,1.0 };
+    //std::cout << "scaling matrix: " << scaling << std::endl;
+
+    //Scaling of W 
+    //For first point (test)
+    //std::cout << "scaling one of the points_0T: " << scaling * points_0T[0]  << std::endl;
+    //For all points
+
+    std::vector<vec3> points_scaled;
+
+    for (int i = 0; i < points_T.size(); i++)
+    {
+        vec3 scaled_point = scaling * points_T[i];
+        points_scaled.push_back(scaled_point);
+    }
+
+    return points_scaled;
+}
+
 
 /// convert a 3 by 3 matrix of type 'Matrix<double>' to mat3
-mat3 to_mat3(Matrix<double> &M) {
+mat3 to_mat3(Matrix<double>& M) {
     mat3 result;
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j)
@@ -51,7 +109,7 @@ mat3 to_mat3(Matrix<double> &M) {
 
 /// convert M of type 'matN' (N can be any positive integer) to type 'Matrix<double>'
 template<typename mat>
-Matrix<double> to_Matrix(const mat &M) {
+Matrix<double> to_Matrix(const mat& M) {
     const int num_rows = M.num_rows();
     const int num_cols = M.num_columns();
     Matrix<double> result(num_rows, num_cols);
@@ -210,100 +268,29 @@ bool Triangulation::triangulation(
     //Estimation of fundamental matrix F;
     // Normalization of points
     // Find centroid of points of points_0
-    double sum_x0 = 0;
-    double sum_y0 = 0;
-    for (int i = 0; i < points_0.size(); i++)
-    {
-        sum_x0 = sum_x0 + points_0[i][0];
-        sum_y0 = sum_y0 + points_0[i][1];
-    }
-    float mean_x0 = sum_x0 / points_0.size();
-    float mean_y0 = sum_y0 / points_0.size();
-    std::cout << "mean x0 " << mean_x0 << std::endl;
-    std::cout << "mean y0: " << mean_y0 << std::endl;
 
-    vec3 centroid_0 = { mean_x0, mean_y0, 1.0};
-    std::cout << "Centroid_0: " << centroid_0 << std::endl;
-    
-    // Find centroid of points of points_1
-    double sum_x1 = 0;
-    double sum_y1 = 0;
-    for (int i = 0; i < points_1.size(); i++)
-    {
-        sum_x1 = sum_x1 + points_1[i][0];
-        sum_y1 = sum_y1 + points_1[i][1];
-    }
-    float mean_x1 = sum_x1 / points_1.size();
-    float mean_y1 = sum_y1 / points_1.size();
-    std::cout << "mean x1: " << mean_x1 << std::endl;
-    std::cout << "mean y1: " << mean_y1 << std::endl;
+    std::vector<vec3> Npoints_0 = points_normalize(points_0);
+    std::vector<vec3> Npoints_1 = points_normalize(points_1);
 
-    vec3 centroid_1 = { mean_x1, mean_y1, 1 };
-    std::cout << "Centroid_1: " << centroid_1 << std::endl;
-    
-
-    //Translation of W by centroid
-    // "" for points_0
-    std::vector<vec3> points_0T;
-    for (int i = 0; i < points_0.size(); i++)
-    {
-        vec3 V = { points_0[i][0] - centroid_0[0], points_0[i][1] - centroid_0[1], 1 };
-        points_0T.push_back(V);
-    }
-    //std::cout << "points_0T: " << points_0T << std::endl;
-    //std::cout << "points_0: " << points_0[0] << std::endl;
-    
-
-    float sum_mean_dist0 = 0;
-
-    for (int i = 0; i < points_0T.size(); i++)
-    {
-        sum_mean_dist0 = sum_mean_dist0 + (dist_c(points_0T[i], centroid_0));
-    }
-
-    //std::cout << "sum dist0" << sum_mean_dist0 << std::endl;
-
-    float mean_dist0 = sum_mean_dist0 / points_0T.size();
-
-    // Initialize scaling matrix
-    mat3 scaling{ ((float) sqrt(2.0)/mean_dist0),0.0,0.0,
-                   0.0,((float)sqrt(2.0) / mean_dist0),0.0,
-                   0.0,0.0,1.0 };
-    //std::cout << "scaling matrix: " << scaling << std::endl;
-
-
-
-    //Scaling of W 
-    //For first point (test)
-    //std::cout << "scaling one of the points_0T: " << scaling * points_0T[0]  << std::endl;
-    //For all points
-
-    std::vector<vec3> points_0scaled;
-
-    for (int i = 0; i < points_0T.size(); i++)
-    {
-        vec3 scaled_point = scaling * points_0T[i];
-        points_0scaled.push_back(scaled_point);
-    }
     //std::cout << "scaling of all points_0: " << points_0scaled << std::endl;
 
     //std::cout << "try func dist: " << dist_c(points_0T[0], centroid_0) << std::endl;
 
     //Construction of W 
     //Initialize empty matrix W
-    Matrix<double> Wlol(points_0scaled.size(), 9, 0.0);
+    Matrix<double> Wlol(Npoints_0.size(), 9, 0.0);
 
     //std::vector<vec3> points_1scaled;
-    
 
-    for (int i = 0; i < points_0scaled.size(); i++)
+
+    for (int i = 0; i < Npoints_0.size(); i++)
     {
-        double x1 = points_0scaled[i][0];
-        double x2 = points_0scaled[i][0];
-        double y1 = points_0scaled[i][1];
-        double y2 = points_0scaled[i][1];
-        std::vector<double> longvec{x1*x2, y1*x2, x2, x1*y2, y1*y2, y2, x1, y1, 1.0};
-        Wlol.set_row(longvec,i);
+        double x1 = Npoints_0[i][0];
+        double x2 = Npoints_1[i][0];
+        double y1 = Npoints_0[i][1];
+        double y2 = Npoints_1[i][1];
+        std::vector<double> longvec{ x1 * x2, y1 * x2, x2, x1 * y2, y1 * y2, y2, x1, y1, 1.0 };
+        Wlol.set_row(longvec, i);
     }
 
     std::cout << "funny matrix: " << Wlol << std::endl;
