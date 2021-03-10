@@ -88,6 +88,21 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+#Executables
+**/cmake-build-debug
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/install_manifest.txt
+**/CMakeFiles/
+**/CTestTestfile.cmake
+**/Makefile
+**/*.cbp
+**/CMakeScripts
+**/compile_commands.json
+*/CMakeLists
+*/out
+
+
 # Chutzpah Test files
 _Chutzpah*
 
@@ -302,6 +317,7 @@ paket-files/
 **/*.cbp
 **/CMakeScripts
 **/compile_commands.json
+*out/
 
 # FAKE - F# Make
 .fake/
