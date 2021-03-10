@@ -269,7 +269,7 @@ bool Triangulation::triangulation(
     mat3 scaling{ ((float) sqrt(2.0)/mean_dist0),0.0,0.0,
                    0.0,((float)sqrt(2.0) / mean_dist0),0.0,
                    0.0,0.0,1.0 };
-    std::cout << "scaling matrix: " << scaling << std::endl;
+    //std::cout << "scaling matrix: " << scaling << std::endl;
 
 
 
@@ -285,13 +285,28 @@ bool Triangulation::triangulation(
         vec3 scaled_point = scaling * points_0T[i];
         points_0scaled.push_back(scaled_point);
     }
-    std::cout << "scaling of all points_0: " << points_0scaled << std::endl;
+    //std::cout << "scaling of all points_0: " << points_0scaled << std::endl;
 
     //std::cout << "try func dist: " << dist_c(points_0T[0], centroid_0) << std::endl;
 
+    //Construction of W 
+    //Initialize empty matrix W
+    Matrix<double> Wlol(points_0scaled.size(), 9, 0.0);
 
+    //std::vector<vec3> points_1scaled;
+    
 
+    for (int i = 0; i < points_0scaled.size(); i++)
+    {
+        double x1 = points_0scaled[i][0];
+        double x2 = points_0scaled[i][0];
+        double y1 = points_0scaled[i][1];
+        double y2 = points_0scaled[i][1];
+        std::vector<double> longvec{x1*x2, y1*x2, x2, x1*y2, y1*y2, y2, x1, y1, 1.0};
+        Wlol.set_row(longvec,i);
+    }
 
+    std::cout << "funny matrix: " << Wlol << std::endl;
 
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
