@@ -288,6 +288,21 @@ _Pvt_Extensions
 .paket/paket.exe
 paket-files/
 
+# Executables
+*build/
+*CMakeLists.txt.user
+*CMakeCache.txt
+**/cmake-build-debug
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/install_manifest.txt
+**/CMakeFiles/
+**/CTestTestfile.cmake
+**/Makefile
+**/*.cbp
+**/CMakeScripts
+**/compile_commands.json
+
 # FAKE - F# Make
 .fake/
 
