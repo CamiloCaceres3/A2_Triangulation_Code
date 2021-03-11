@@ -38,7 +38,7 @@ float dist_c(vec3 point, vec3 centroid)
 }
 
 /// Normalize data points
-std::vector<vec3> points_normalize(std::vector<vec3> points)
+std::vector<vec3> points_normalize(std::vector<vec3> points, mat3 &trans)
 {
     double sum_x = 0;
     double sum_y = 0;
@@ -68,8 +68,8 @@ std::vector<vec3> points_normalize(std::vector<vec3> points)
     float mean_dist = sum_mean_dist / points.size();
 
     // Initialize scaling matrix
-    mat3 scaling{ ((float)sqrt(2.0) / mean_dist),0.0,-((float)sqrt(2.0) / mean_dist)*mean_x,
-                   0.0,((float)sqrt(2.0) / mean_dist),-((float)sqrt(2.0) / mean_dist)*mean_y,
+    trans = { ((float)sqrt(2.0) / mean_dist),0.0,-((float)sqrt(2.0) / mean_dist)*mean_x,
+                   0.0,((float)sqrt(2.0) / mean_dist),-((float)sqrt(2.0) / mean_dist)* mean_y,
                    0.0,0.0,1.0 };
     //std::cout << "scaling matrix: " << scaling << std::endl;
 
@@ -82,7 +82,7 @@ std::vector<vec3> points_normalize(std::vector<vec3> points)
 
     for (int i = 0; i < points.size(); i++)
     {
-        vec3 scaled_point = scaling * points[i];
+        vec3 scaled_point = trans * points[i];
         points_scaled.push_back(scaled_point);
     }
 
@@ -213,10 +213,10 @@ bool Triangulation::triangulation(
     cross_prod.normalize();
 
     /// a 3 by 3 matrix (all entries are intentionally NOT initialized for efficiency reasons)
-    mat3 F;
+    //mat3 F;
     /// ... here you compute or initialize F.
     /// compute the inverse of K
-    mat3 invF = inverse(F);
+    //mat3 invF = inverse(F);
 
     /// ----------- dynamic-size matrices
 
@@ -261,14 +261,21 @@ bool Triangulation::triangulation(
 
     //Estimation of fundamental matrix F;
     // Normalization of points
-    // Find centroid of points of points_0
+    
+    mat3 trans_0;
+    mat3 trans_1;
 
-    std::vector<vec3> Npoints_0 = points_normalize(points_0);
-    std::vector<vec3> Npoints_1 = points_normalize(points_1);
+    std::vector<vec3> Npoints_0 = points_normalize(points_0, trans_0);
+    std::vector<vec3> Npoints_1 = points_normalize(points_1, trans_1);
 
-    //std::cout << "scaling of all points_0: " << points_0scaled << std::endl;
-
-    //std::cout << "try func dist: " << dist_c(points_0T[0], centroid_0) << std::endl;
+    /*
+    for (int i = 0; i < points_0.size(); i++)
+    {
+        std::cout << points_0[i] << std::endl;
+        std::cout << Npoints_0[i] << std::endl;
+        std::cout << inverse(trans_0) * Npoints_0[i] << std::endl;
+    }*/
+    //std::cout <<  Npoints_0 * trans_0  << std::endl;
 
     //Construction of W 
     //Initialize empty matrix W
@@ -286,8 +293,47 @@ bool Triangulation::triangulation(
         std::vector<double> longvec{ x1 * x2, y1 * x2, x2, x1 * y2, y1 * y2, y2, x1, y1, 1.0 };
         Wlol.set_row(longvec, i);
     }
+    //std::cout << "Normalized matrix: " << Wlol << std::endl;
 
-    std::cout << "funny matrix: " << Wlol << std::endl;
+    //Linear solution (based on SVD)
+    
+    int m = points_0.size();
+    int n = 9;
+    Matrix<double> U(m, m, 0.0);   // initialized with 0s
+    Matrix<double> S(m, n, 0.0);   // initialized with 0s
+    Matrix<double> V(n, n, 0.0);   // initialized with 0s
+    svd_decompose(Wlol, U, S, V);
+    
+    std::vector<double> fv = V.get_column(V.cols()-1);
+    mat3 F;
+    int e = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            F(i, j) =  fv[ e ];
+            e++;
+        }
+    }
+    
+    F(2, 2) = 1;
+    int nf = 3;
+    Matrix<double> UF(nf, nf, 0.0);   // initialized with 0s
+    Matrix<double> SF(nf, nf, 0.0);   // initialized with 0s
+    Matrix<double> VF(nf, nf, 0.0);   // initialized with 0s
+    
+    Matrix<double> FF = to_Matrix(F);
+
+    svd_decompose(FF, U, S, V);
+    //Constraint enforcement(based on SVD)
+    S(2, 2) = 0;
+    FF = U * S * transpose(V);
+    //Denormalization
+    F = to_mat3(FF);
+    F = transpose(trans_1) * F * trans_0;
+
+    std::cout << F << std::endl;
+  
 
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
