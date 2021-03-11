@@ -56,26 +56,20 @@ std::vector<vec3> points_normalize(std::vector<vec3> points)
 
     //Translation of W by centroid
     // "" for points_0
-    std::vector<vec3> points_T;
-    for (int i = 0; i < points.size(); i++)
-    {
-        vec3 V = { points[i][0] - centroid[0], points[i][1] - centroid[1], 1 };
-        points_T.push_back(V);
-    }
     //std::cout << "points_0T: " << points_0T << std::endl;
     //std::cout << "points_0: " << points_0[0] << std::endl;
     float sum_mean_dist = 0;
-    for (int i = 0; i < points_T.size(); i++)
+    for (int i = 0; i < points.size(); i++)
     {
-        sum_mean_dist = sum_mean_dist + (dist_c(points_T[i], centroid));
+        sum_mean_dist = sum_mean_dist + (dist_c(points[i], centroid));
     }
     //std::cout << "sum dist0" << sum_mean_dist0 << std::endl;
 
-    float mean_dist = sum_mean_dist / points_T.size();
+    float mean_dist = sum_mean_dist / points.size();
 
     // Initialize scaling matrix
-    mat3 scaling{ ((float)sqrt(2.0) / mean_dist),0.0,0.0,
-                   0.0,((float)sqrt(2.0) / mean_dist),0.0,
+    mat3 scaling{ ((float)sqrt(2.0) / mean_dist),0.0,-((float)sqrt(2.0) / mean_dist)*mean_x,
+                   0.0,((float)sqrt(2.0) / mean_dist),-((float)sqrt(2.0) / mean_dist)*mean_y,
                    0.0,0.0,1.0 };
     //std::cout << "scaling matrix: " << scaling << std::endl;
 
@@ -86,9 +80,9 @@ std::vector<vec3> points_normalize(std::vector<vec3> points)
 
     std::vector<vec3> points_scaled;
 
-    for (int i = 0; i < points_T.size(); i++)
+    for (int i = 0; i < points.size(); i++)
     {
-        vec3 scaled_point = scaling * points_T[i];
+        vec3 scaled_point = scaling * points[i];
         points_scaled.push_back(scaled_point);
     }
 
