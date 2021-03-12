@@ -355,7 +355,10 @@ bool Triangulation::triangulation(
 
     mat3 ZZ{ 0.0,1.0, 0.0,
             -1.0,0.0,0.0,
-            0.0,0.0,.0 };
+            0.0,0.0,0.0 };
+
+    Matrix<double> Wd = to_Matrix(WW);
+    Matrix<double> Zd = to_Matrix(ZZ);
 
     Matrix<double> UE(nf, nf, 0.0);   // initialized with 0s
     Matrix<double> SE(nf, nf, 0.0);   // initialized with 0s
@@ -365,6 +368,32 @@ bool Triangulation::triangulation(
 
     svd_decompose(EE, UE, SE, VE);
 
+    SE(0, 0) = 1.0; SE(1, 1) = 1.0;
+
+    EE = UE * SE * transpose(VE);
+
+    //std::cout << EE << std::endl;
+
+    //Options of R an t
+   
+    Matrix<double> R1;
+    Matrix<double> R2;
+    std::vector<double> t1;
+    std::vector<double> t2;
+    
+    double r1det = determinant(UE * Wd * transpose(VE));
+    double r2det = determinant(UE * transpose(Wd) * transpose(VE));
+    R1 = r1det * (UE * Wd * transpose(VE));
+    R2 = r2det * (UE * transpose(Wd) * transpose(VE));
+
+    t1 = UE.get_column(2);
+    t2 = -1.0* UE.get_column(2);
+    std::cout << "detR1" << r1det << "detR2" << r2det << std::endl;
+    std::cout <<"R1" << R1 << std:: endl;
+    std::cout << "R2" <<R2 << std::endl;
+    std::cout <<"t1" <<t1 << std::endl;
+    std::cout << "t2" <<t2 << std::endl;
+    
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
 
