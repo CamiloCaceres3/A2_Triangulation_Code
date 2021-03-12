@@ -394,6 +394,22 @@ bool Triangulation::triangulation(
     std::cout <<"t1" <<t1 << std::endl;
     std::cout << "t2" <<t2 << std::endl;
     
+    //W*R*T
+
+    mat3 R13 = to_mat3(R1);
+    vec3 t13 { (float)t1[0], (float)t1[1], (float)t1[2] };
+    mat3 R23 = to_mat3(R2);
+    vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
+
+    auto wrt1 = (WW * R13) *t13;
+    auto wrt2 = (WW * R23) * t13;
+    auto wrt3 = (WW * R13) * t23;
+    auto wrt4 = (WW * R23) * t23;
+    
+    std::cout << "R1t1" << wrt1 << std::endl;
+    std::cout << "R2t1" << wrt2 << std::endl;
+    std::cout << "R1t2" << wrt3 << std::endl;
+    std::cout << "R2t2" << wrt4 << std::endl;
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
 
