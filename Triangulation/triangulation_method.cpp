@@ -334,6 +334,36 @@ bool Triangulation::triangulation(
 
     std::cout << F << std::endl;
   
+    //STEP 2
+
+   //Find the 4 relative poses 
+
+    //Compute matrix E = KtFK
+
+    // Matrix K
+    mat3 K { fx,1.0,cx,
+              0.0,fy,cy,
+              0.0,0.0,1.0 };
+
+    mat3 E;
+
+    E = transpose(K) * F * K;
+
+    mat3 WW{ 0.0,-1.0, 0.0,
+            1.0,0.0,0.0,
+            0.0,0.0,1.0 };
+
+    mat3 ZZ{ 0.0,1.0, 0.0,
+            -1.0,0.0,0.0,
+            0.0,0.0,.0 };
+
+    Matrix<double> UE(nf, nf, 0.0);   // initialized with 0s
+    Matrix<double> SE(nf, nf, 0.0);   // initialized with 0s
+    Matrix<double> VE(nf, nf, 0.0);   // initialized with 0s
+
+    Matrix<double> EE = to_Matrix(E);
+
+    svd_decompose(EE, UE, SE, VE);
 
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
