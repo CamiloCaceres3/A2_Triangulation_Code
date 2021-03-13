@@ -424,12 +424,25 @@ bool Triangulation::triangulation(
     vec4 M2_2 = M_2.row(1);
     vec4 M3_2 = M_2.row(2);
 
-    mat3 A {
-        points_0[0][0] * M3_1 - M1_1,
-        points_0[1][0] * M3_1 - M2_1,
+    std::vector<double> P;
+
+    for (int i = 0; i < points_0.size(); i++){
+        Matrix<double> A{ points_0[0][0] * M3_1 - M1_1,
+        points_0[0][1] * M3_1 - M2_1,
         points_1[0][0] * M3_2 - M1_2,
-        points_1[1][0] * M3_2 - M2_2
+        points_1[0][1] * M3_2 - M2_2
+        };
+              
+        // use SVD to solve for AP = 0
+
+    Matrix<double> AU;
+    Matrix<double> AS;
+    Matrix<double> AV;
+    svd_decompose(A, AU, AS, AV);
+    P[i] == AV[-1];
     };
+
+    
 
 
     // TODO: Don't forget to
