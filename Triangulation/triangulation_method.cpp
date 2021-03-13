@@ -416,21 +416,27 @@ bool Triangulation::triangulation(
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
 
-    mat34 M_1(1.0f);                    // M = [I 0]
+    //mat34 M_1(1.0f);                    // M = [I 0]
 
-    Matrix<double> M_2;    // M' = [R T]
+    Matrix<double> M_1(3, 4, 0.0);
+    M_1[0][0] = 1;
+    M_1[1][1] = 1;
+    M_1[2][2] = 1;
+
+
+    Matrix<double> M_2(3, 4, 0.0);    // M' = [R T]
     M_2.set_column(R1.get_column(0), 0);
     M_2.set_column(R1.get_column(1), 1);
     M_2.set_column(R1.get_column(2), 2);
     M_2.set_column(t1, 3);
 
 
-    Matrix<double> P;
+    Matrix<double> P(points_0.size(), 4);
 
     for (int i = 0; i < points_0.size(); i++){
         Matrix<double> A; 
-        A.set_row(points_0[i][0] * M_1.row(2) - M_1.row(0), 0);
-        A.set_row(points_0[i][1] * M_1.row(2) - M_1.row(1), 1);
+       A.set_row(points_0[i][0] * M_1.get_row(2) - M_1.get_row(0), 0);
+       A.set_row(points_0[i][1] * M_1.get_row(2) - M_1.get_row(1), 1);
         A.set_row(points_1[i][0] * M_2.get_row(2) - M_2.get_row(0), 2);
         A.set_row(points_1[i][1] * M_2.get_row(2) - M_2.get_row(1), 3);
               
@@ -442,7 +448,7 @@ bool Triangulation::triangulation(
         svd_decompose(A, AU, AS, AV);
         P.set_column(AV.get_column(-1), i);
     };
-    
+    std::cout << "P: " << P[1] << std::endl;
     
 
 
