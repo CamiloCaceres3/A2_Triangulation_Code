@@ -404,12 +404,7 @@ bool Triangulation::triangulation(
     std::cout <<"t1" <<t1 << std::endl;
     std::cout << "t2" <<t2 << std::endl;
     
-    //W*R*T
-     
-    mat3 R13 = to_mat3(R1);
-    vec3 t13 { (float)t1[0], (float)t1[1], (float)t1[2] };
-    mat3 R23 = to_mat3(R2);
-    vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
+
 
     //Finding the correct relative pose
 
@@ -473,18 +468,19 @@ bool Triangulation::triangulation(
 
     for (int i = 0; i < points_0.size(); i++) {
         Matrix<double> A(4, 3, 0.0);
+        /*
         A.set_row((points_0[i][0] * Mprojem.get_row(2) - Mprojem.get_row(0)), 0);
         A.set_row((points_0[i][1] * Mprojem.get_row(2) - Mprojem.get_row(1)), 1);
         A.set_row((points_1[i][0] * Mprimem.get_row(2) - Mprimem.get_row(0)), 2);
         A.set_row((points_1[i][1] * Mprimem.get_row(2) - Mprimem.get_row(1)), 3);
-
+        
         Matrix<double> AU(4,4);
         Matrix<double> AS(4,3);
         Matrix<double> AV(3,3);
         svd_decompose(A, AU, AS, AV);
         PP.set_column(AV.get_column(2), i);
         std::cout << "AV: " << AV << std::endl;
-
+        */
     }
 
     std::cout << "PP: " << PP << std::endl;
