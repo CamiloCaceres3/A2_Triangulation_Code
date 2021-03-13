@@ -88,6 +88,15 @@ std::vector<vec3> points_normalize(std::vector<vec3> points, mat3 &trans)
 
     return points_scaled;
 }
+// Figure out the poses
+mat34 get_pose_M(mat3 R, vec3 t) {
+    mat34 Rt;
+    Rt.set_col(0, R.col(0));
+    Rt.set_col(1, R.col(1));
+    Rt.set_col(2, R.col(2));
+    Rt.set_col(3, t);
+    return Rt;
+}
 
 
 /// convert a 3 by 3 matrix of type 'Matrix<double>' to mat3
@@ -402,54 +411,115 @@ bool Triangulation::triangulation(
     mat3 R23 = to_mat3(R2);
     vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
 
-    auto wrt1 = (WW * R13) *t13;
-    auto wrt2 = (WW * R23) * t13;
-    auto wrt3 = (WW * R13) * t23;
-    auto wrt4 = (WW * R23) * t23;
-    
-    std::cout << "R1t1" << wrt1 << std::endl;
-    std::cout << "R2t1" << wrt2 << std::endl;
-    std::cout << "R1t2" << wrt3 << std::endl;
-    std::cout << "R2t2" << wrt4 << std::endl;
+    //Finding the correct relative pose
 
-    
+
+    mat3 R13 = to_mat3(R1);
+    vec3 t13{ (float)t1[0], (float)t1[1], (float)t1[2] };
+    mat3 R23 = to_mat3(R2);
+    vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
+
+    std::cout << "R13: " << R13 << std::endl;
+    std::cout << "t13: " << t13 << std::endl;
+
+    mat34 R1t1 = get_pose_M(R13, t13);
+    mat34 R1t2 = get_pose_M(R13, t23);
+    mat34 R2t1 = get_pose_M(R23, t13);
+    mat34 R2t2 = get_pose_M(R23, t23);
+
+    int count_p1 = 0;
+    int count_p2 = 0;
+    int count_p3 = 0;
+    int count_p4 = 0;
+
+    vec4 test_p{ points_1[0][0],points_1[0][1],points_1[0][2],1.0 };
+    vec3 test_p_proj = R1t1 * test_p;
+    std::cout << "R1t1: " << R1t1 << std::endl;
+    std::cout << "test_p: " << test_p << std::endl;
+    std::cout << "test: " << test_p_proj << std::endl;
+
+
+    for (int i = 0; i < points_1.size(); i++)
+    {
+        vec4 p{ Npoints_1[i][0],Npoints_1[i][1],Npoints_1[i][2],1.0f };
+        auto p1 = R1t1 * p;
+        if (p1[2] >= 0) count_p1++;
+        auto p2 = R1t2 * p;
+        if (p2[2] >= 0) count_p2++;
+        auto p3 = R2t1 * p;
+        if (p3[2] >= 0) count_p3++;
+        auto p4 = R2t2 * p;
+        if (p4[2] >= 0) count_p4++;
+    }
+
+    std::cout << "count_p1: " << count_p1 << std::endl;
+    std::cout << "count_p2: " << count_p2 << std::endl;
+    std::cout << "count_p3: " << count_p3 << std::endl;
+    std::cout << "count_p4: " << count_p4 << std::endl;
+
+    mat34 Mprime = K * R1t1;
+    std::cout << "Mprime: " << Mprime << std::endl;
+    Matrix<double> Mprimem = to_Matrix(Mprime);
+
+    mat34 Mproj;
+    Mproj.set_col(0, K.col(0));
+    Mproj.set_col(1, K.col(1));
+    Mproj.set_col(2, K.col(2));
+    Mproj.set_col(3, vec3{ 0,0,0 });
+    std::cout << Mproj << std::endl;
+    Matrix<double> Mprojem = to_Matrix(Mproj);
+
+    Matrix<double> PP(points_0.size(), 4);
+
+    for (int i = 0; i < points_0.size(); i++) {
+        Matrix<double> A(4, 3, 0.0);
+        A.set_row((points_0[i][0] * Mprojem.get_row(2) - Mprojem.get_row(0)), 0);
+        A.set_row((points_0[i][1] * Mprojem.get_row(2) - Mprojem.get_row(1)), 1);
+        A.set_row((points_1[i][0] * Mprimem.get_row(2) - Mprimem.get_row(0)), 2);
+        A.set_row((points_1[i][1] * Mprimem.get_row(2) - Mprimem.get_row(1)), 3);
+
+        Matrix<double> AU(4,4);
+        Matrix<double> AS(4,3);
+        Matrix<double> AV(3,3);
+        svd_decompose(A, AU, AS, AV);
+        PP.set_column(AV.get_column(2), i);
+        std::cout << "AV: " << AV << std::endl;
+
+    }
+
+    std::cout << "PP: " << PP << std::endl;
+
+    /*
+    // TODO: construct the P matrix (so P * m = 0).
+    const int n = 9;
+    const int m = 2 * (int)points_0.size();
+    // Construction of  Matrix P
+    Matrix<double> P(m, n, 0.0);
+    for (int i = 0; i < points_0.size(); i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for(int k = 0 ; k < 2; k++)
+            {
+            }
+            P(4 * i+j , 3 * j) = -Mproj(i, 0);
+            P(4 * i + j, 3 * j +1) = -Mproj(i, 1);
+            P(4 * i + j, 3 * j + 2) = -Mproj(i, 2);
+            P(4 * i + j+1, 3 * j) = -Mproj(i, 0);
+            P(4 * i + j+1, 3 * j + 1) = -Mproj(i, 1);
+            P(4 * i + j+1, 3 * j + 2) = -Mproj(i, 2);
+
+
+        }
+    }
+    */
+
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
 
     //mat34 M_1(1.0f);                    // M = [I 0]
 
-    Matrix<double> M_1(3, 4, 0.0);
-    M_1[0][0] = 1;
-    M_1[1][1] = 1;
-    M_1[2][2] = 1;
 
-
-    Matrix<double> M_2(3, 4, 0.0);    // M' = [R T]
-    M_2.set_column(R1.get_column(0), 0);
-    M_2.set_column(R1.get_column(1), 1);
-    M_2.set_column(R1.get_column(2), 2);
-    M_2.set_column(t1, 3);
-
-
-    Matrix<double> P(points_0.size(), 4);
-
-    for (int i = 0; i < points_0.size(); i++){
-        Matrix<double> A; 
-       A.set_row(points_0[i][0] * M_1.get_row(2) - M_1.get_row(0), 0);
-       A.set_row(points_0[i][1] * M_1.get_row(2) - M_1.get_row(1), 1);
-        A.set_row(points_1[i][0] * M_2.get_row(2) - M_2.get_row(0), 2);
-        A.set_row(points_1[i][1] * M_2.get_row(2) - M_2.get_row(1), 3);
-              
-        // use SVD to solve for AP = 0
-
-        Matrix<double> AU;
-        Matrix<double> AS;
-        Matrix<double> AV(3,3,0.0);
-        svd_decompose(A, AU, AS, AV);
-        P.set_column(AV.get_column(-1), i);
-    };
-    std::cout << "P: " << P[1] << std::endl;
-    
 
 
     // TODO: Don't forget to
