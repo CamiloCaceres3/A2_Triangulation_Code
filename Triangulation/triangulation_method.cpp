@@ -306,13 +306,13 @@ bool Triangulation::triangulation(
     svd_decompose(Wlol, U, S, V);
     
     std::vector<double> fv = V.get_column(V.cols()-1);
-    mat3 F;
+    mat3 F;                         //Fundamental Matrix 
     int e = 0;
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            F(i, j) =  fv[ e ];
+            F(i, j) =  fv[ e ];     //0-8
             e++;
         }
     }
@@ -348,13 +348,13 @@ bool Triangulation::triangulation(
 
     mat3 E;
 
-    E = transpose(K) * F * K;
+    E = transpose(K) * F * K; //(2.1) 
 
-    mat3 WW{ 0.0,-1.0, 0.0,
+    mat3 WW{ 0.0,-1.0, 0.0, //(2.2)
             1.0,0.0,0.0,
             0.0,0.0,1.0 };
 
-    mat3 ZZ{ 0.0,1.0, 0.0,
+    mat3 ZZ{ 0.0,1.0, 0.0, //(2.2)
             -1.0,0.0,0.0,
             0.0,0.0,0.0 };
 
@@ -382,12 +382,12 @@ bool Triangulation::triangulation(
     std::vector<double> t1;
     std::vector<double> t2;
     
-    double r1det = determinant(UE * Wd * transpose(VE));
+    double r1det = determinant(UE * Wd * transpose(VE));        //(2.7)
     double r2det = determinant(UE * transpose(Wd) * transpose(VE));
     R1 = r1det * (UE * Wd * transpose(VE));
     R2 = r2det * (UE * transpose(Wd) * transpose(VE));
 
-    t1 = UE.get_column(2);
+    t1 = UE.get_column(2);                                      //(2.9)
     t2 = -1.0* UE.get_column(2);
     std::cout << "detR1" << r1det << "detR2" << r2det << std::endl;
     std::cout <<"R1" << R1 << std:: endl;
