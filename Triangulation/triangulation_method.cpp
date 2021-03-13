@@ -243,6 +243,7 @@ bool Triangulation::triangulation(
     */
     assert(points_0.size() >= 8);
     assert(points_1.size() >= 8);
+    assert(points_0.size() == points_1.size());
     for (int i = 0; i < points_0.size(); i++)
     {
         assert(points_0[i].size() == 3);
