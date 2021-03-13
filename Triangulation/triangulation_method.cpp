@@ -411,31 +411,28 @@ bool Triangulation::triangulation(
     std::cout << "R2t1" << wrt2 << std::endl;
     std::cout << "R1t2" << wrt3 << std::endl;
     std::cout << "R2t2" << wrt4 << std::endl;
+
+    
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
 
     mat34 M_1(1.0f);                    // M = [I 0]
-    vec4 M1_1 = M_1.row(0);
-    vec4 M2_1 = M_1.row(1);
-    vec4 M3_1 = M_1.row(2);
 
-    Matrix<double> M_2; { R1, T };       // M' = [R T]
+    Matrix<double> M_2;    // M' = [R T]
     M_2.set_column(R1.get_column(0), 0);
     M_2.set_column(R1.get_column(1), 1);
     M_2.set_column(R1.get_column(2), 2);
-    M_2.set_column(T.get_column(0), 3);
-    vec4 M1_2 = M_2.row(0);
-    vec4 M2_2 = M_2.row(1);
-    vec4 M3_2 = M_2.row(2);
+    M_2.set_column(t1, 3);
+
 
     Matrix<double> P;
 
     for (int i = 0; i < points_0.size(); i++){
         Matrix<double> A; 
-        A.set_row(points_0[0][0] * M3_1 - M1_1), 0);
-        A.set_row(points_0[0][1] * M3_1 - M2_1, 1);
-        A.set_row(points_1[0][0] * M3_2 - M1_2, 2);
-        A.set_row(points_1[0][1] * M3_2 - M2_2, 3);
+        A.set_row(points_0[i][0] * M_1.row(2) - M_1.row(0), 0);
+        A.set_row(points_0[i][1] * M_1.row(2) - M_1.row(1), 1);
+        A.set_row(points_1[i][0] * M_2.get_row(2) - M_2.get_row(0), 2);
+        A.set_row(points_1[i][1] * M_2.get_row(2) - M_2.get_row(1), 3);
               
         // use SVD to solve for AP = 0
 
@@ -445,7 +442,7 @@ bool Triangulation::triangulation(
         svd_decompose(A, AU, AS, AV);
         P.set_column(AV.get_column(-1), i);
     };
-
+    
     
 
 
