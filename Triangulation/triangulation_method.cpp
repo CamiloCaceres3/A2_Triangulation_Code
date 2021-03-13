@@ -396,7 +396,7 @@ bool Triangulation::triangulation(
     std::cout << "t2" <<t2 << std::endl;
     
     //W*R*T
-
+     
     mat3 R13 = to_mat3(R1);
     vec3 t13 { (float)t1[0], (float)t1[1], (float)t1[2] };
     mat3 R23 = to_mat3(R2);
@@ -413,6 +413,24 @@ bool Triangulation::triangulation(
     std::cout << "R2t2" << wrt4 << std::endl;
     // TODO: Reconstruct 3D points. The main task is
     //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
+
+    mat34 M_1(1.0f);                    // M = [I 0]
+    vec4 M1_1 = M_1.row(0);
+    vec4 M2_1 = M_1.row(1);
+    vec4 M3_1 = M_1.row(2);
+
+    mat34 M_2 { R1, T };                // M' = [R T]
+    vec4 M1_2 = M_2.row(0);
+    vec4 M2_2 = M_2.row(1);
+    vec4 M3_2 = M_2.row(2);
+
+    mat3 A {
+        points_0[0][0] * M3_1 - M1_1,
+        points_0[1][0] * M3_1 - M2_1,
+        points_1[0][0] * M3_2 - M1_2,
+        points_1[1][0] * M3_2 - M2_2
+    };
+
 
     // TODO: Don't forget to
     //          - write your recovered 3D points into 'points_3d' (the viewer can visualize the 3D points for you);
