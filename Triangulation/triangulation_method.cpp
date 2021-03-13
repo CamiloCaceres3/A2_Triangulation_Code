@@ -464,26 +464,29 @@ bool Triangulation::triangulation(
     std::cout << Mproj << std::endl;
     Matrix<double> Mprojem = to_Matrix(Mproj);
 
-    Matrix<double> PP(points_0.size(), 4);
 
     for (int i = 0; i < points_0.size(); i++) {
         Matrix<double> A(4, 3, 0.0);
-        /*
-        A.set_row((points_0[i][0] * Mprojem.get_row(2) - Mprojem.get_row(0)), 0);
-        A.set_row((points_0[i][1] * Mprojem.get_row(2) - Mprojem.get_row(1)), 1);
-        A.set_row((points_1[i][0] * Mprimem.get_row(2) - Mprimem.get_row(0)), 2);
-        A.set_row((points_1[i][1] * Mprimem.get_row(2) - Mprimem.get_row(1)), 3);
         
-        Matrix<double> AU(4,4);
-        Matrix<double> AS(4,3);
-        Matrix<double> AV(3,3);
+        std::vector<double> s1 = (points_0[i][0] * Mprojem.get_row(2) - Mprojem.get_row(0));
+        std::vector<double> s2 = (points_0[i][1] * Mprojem.get_row(2) - Mprojem.get_row(1));
+        std::vector<double> s3 = (points_1[i][0] * Mprimem.get_row(2) - Mprimem.get_row(0));
+        std::vector<double> s4 = (points_1[i][1] * Mprimem.get_row(2) - Mprimem.get_row(1));
+        A.set_row({s1[0],s1[1],s1[2]}, 0);
+        A.set_row({ s2[0],s2[1],s2[2] }, 1);
+        A.set_row({ s3[0],s3[1],s3[2] }, 2);
+        A.set_row({ s4[0],s4[1],s4[2] }, 3);
+        Matrix<double> AU(4,4,0.0);
+        Matrix<double> AS(4,3,0.0);
+        Matrix<double> AV(3,3,0.0);
         svd_decompose(A, AU, AS, AV);
-        PP.set_column(AV.get_column(2), i);
-        std::cout << "AV: " << AV << std::endl;
-        */
+        vec3 p{ (float) AV(0,2), (float) AV(1,2), (float)AV(2,2) };
+        points_3d.push_back(p);
     }
+    R = R13;
+    t = t13;
 
-    std::cout << "PP: " << PP << std::endl;
+    std::cout << "PP: " << points_3d << std::endl;
 
     /*
     // TODO: construct the P matrix (so P * m = 0).
