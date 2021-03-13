@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/easy3d
+# Install script for directory: C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/easy3d
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/install/x64-Debug (default)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/core/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/fileio/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/util/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/viewer/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/optimizer/cmake_install.cmake")
+  include("C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/build/x64-Debug (default)/easy3d/core/cmake_install.cmake")
+  include("C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/build/x64-Debug (default)/easy3d/fileio/cmake_install.cmake")
+  include("C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/build/x64-Debug (default)/easy3d/util/cmake_install.cmake")
+  include("C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/build/x64-Debug (default)/easy3d/viewer/cmake_install.cmake")
+  include("C:/Users/neder/Documents/Geomatics/Q3/1016/hw02/out/build/x64-Debug (default)/easy3d/optimizer/cmake_install.cmake")
 
 endif()
 

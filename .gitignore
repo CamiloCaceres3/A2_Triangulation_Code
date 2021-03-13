@@ -100,7 +100,7 @@ StyleCopReport.xml
 **/CMakeScripts
 **/compile_commands.json
 */CMakeLists
-*/out
+**/out/
 
 
 # Chutzpah Test files
