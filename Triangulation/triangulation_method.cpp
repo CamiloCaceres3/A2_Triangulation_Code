@@ -424,8 +424,6 @@ bool Triangulation::triangulation(
     M_2.set_column(R1.get_column(1), 1);
     M_2.set_column(R1.get_column(2), 2);
     M_2.set_column(T.get_column(0), 3);
-    M_2.set_column(T.get_column(1), 4);
-    M_2.set_column(T.get_column(2), 5);
     vec4 M1_2 = M_2.row(0);
     vec4 M2_2 = M_2.row(1);
     vec4 M3_2 = M_2.row(2);
