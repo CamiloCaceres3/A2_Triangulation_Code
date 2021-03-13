@@ -444,7 +444,7 @@ bool Triangulation::triangulation(
 
         Matrix<double> AU;
         Matrix<double> AS;
-        Matrix<double> AV;
+        Matrix<double> AV(3,3,0.0);
         svd_decompose(A, AU, AS, AV);
         P.set_column(AV.get_column(-1), i);
     };
