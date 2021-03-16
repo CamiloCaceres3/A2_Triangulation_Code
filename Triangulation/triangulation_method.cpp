@@ -49,21 +49,16 @@ std::vector<vec3> points_normalize(std::vector<vec3> points, mat3 &trans)
     }
     float mean_x = sum_x / points.size();
     float mean_y = sum_y / points.size();
-    //std::cout << "mean x0 " << mean_x0 << std::endl;
-    //std::cout << "mean y0: " << mean_y0 << std::endl;
+
+    // Centroid
     vec3 centroid = { mean_x, mean_y, 1.0 };
-    //std::cout << "Centroid_0: " << centroid_0 << std::endl;
 
     //Translation of W by centroid
-    // "" for points_0
-    //std::cout << "points_0T: " << points_0T << std::endl;
-    //std::cout << "points_0: " << points_0[0] << std::endl;
     float sum_mean_dist = 0;
     for (int i = 0; i < points.size(); i++)
     {
         sum_mean_dist = sum_mean_dist + (dist_c(points[i], centroid));
     }
-    //std::cout << "sum dist0" << sum_mean_dist0 << std::endl;
 
     float mean_dist = sum_mean_dist / points.size();
 
@@ -71,12 +66,8 @@ std::vector<vec3> points_normalize(std::vector<vec3> points, mat3 &trans)
     trans = { ((float)sqrt(2.0) / mean_dist),0.0,-((float)sqrt(2.0) / mean_dist)*mean_x,
                    0.0,((float)sqrt(2.0) / mean_dist),-((float)sqrt(2.0) / mean_dist)* mean_y,
                    0.0,0.0,1.0 };
-    //std::cout << "scaling matrix: " << scaling << std::endl;
 
     //Scaling of W 
-    //For first point (test)
-    //std::cout << "scaling one of the points_0T: " << scaling * points_0T[0]  << std::endl;
-    //For all points
 
     std::vector<vec3> points_scaled;
 
@@ -138,112 +129,6 @@ bool Triangulation::triangulation(
     vec3& t    /// output: recovered translation of 2nd camera (used for updating the viewer and visual inspection)
 ) const
 {
-    /// NOTE: there might be multiple workflows for reconstructing 3D geometry from corresponding image points.
-    ///       This assignment uses the commonly used one explained in our lecture.
-    ///       It is advised to define a function for each sub-task. This way you have a clean and well-structured
-    ///       implementation, which also makes testing and debugging easier. You can put your other functions above
-    ///       triangulation(), or feel free to put them in one or multiple separate files.
-
-    std::cout << "\nTODO: I am going to implement the triangulation() function in the following file:" << std::endl
-        << "\t    - triangulation_method.cpp\n\n";
-
-    std::cout << "[Liangliang]:\n"
-        "\tFeel free to use any data structure and function offered by Easy3D, in particular the following two\n"
-        "\tfiles for vectors and matrices:\n"
-        "\t    - easy3d/core/mat.h  Fixed-size matrices and related functions.\n"
-        "\t    - easy3d/core/vec.h  Fixed-size vectors and related functions.\n"
-        "\tFor matrices with unknown sizes (e.g., when handling an unknown number of corresponding points\n"
-        "\tstored in a file, where their sizes can only be known at run time), a dynamic-sized matrix data\n"
-        "\tstructure is necessary. In this case, you can use the templated 'Matrix' class defined in\n"
-        "\t    - Triangulation/matrix.h  Matrices of arbitrary dimensions and related functions.\n"
-        "\tPlease refer to the corresponding header files for more details of these data structures.\n\n"
-        "\tIf you choose to implement the non-linear method for triangulation (optional task). Please refer to\n"
-        "\t'Tutorial_NonlinearLeastSquares/main.cpp' for an example and some explanations. \n\n"
-        "\tIn your final submission, please\n"
-        "\t    - delete ALL unrelated test or debug code and avoid unnecessary output.\n"
-        "\t    - include all the source code (original code framework + your implementation).\n"
-        "\t    - do NOT include the 'build' directory (which contains the intermediate files in a build step).\n"
-        "\t    - make sure your code compiles and can reproduce your results without any modification.\n\n" << std::flush;
-
-    /// Easy3D provides fixed-size matrix types, e.g., mat2 (2x2), mat3 (3x3), mat4 (4x4), mat34 (3x4).
-    /// To use these matrices, their sizes should be known to you at the compile-time (i.e., when compiling your code).
-    /// Once defined, their sizes can NOT be changed.
-    /// In 'Triangulation/matrix.h', another templated 'Matrix' type is also provided. This type can have arbitrary
-    /// dimensions and their sizes can be specified at run-time (i.e., when executing your program).
-    /// Below are a few examples showing some of these data structures and related APIs.
-
-    /// ----------- fixed-size matrices
-
-    /// define a 3 by 4 matrix M (you can also define 3 by 4 matrix similarly)
-    mat34 M(1.0f);  /// entries on the diagonal are initialized to be 1 and others to be 0.
-
-    /// set the first row of M
-    M.set_row(0, vec4(1, 1, 1, 1));    /// vec4 is a 4D vector.
-
-    /// set the second column of M
-    M.set_col(1, vec4(2, 2, 2, 2));
-
-    /// get the 3 rows of M
-    vec4 M1 = M.row(0);
-    vec4 M2 = M.row(1);
-    vec4 M3 = M.row(2);
-
-    /// ----------- fixed-size vectors
-
-    /// how to quickly initialize a std::vector
-    std::vector<double> rows = { 0, 1, 2, 3,
-                                4, 5, 6, 7,
-                                8, 9, 10, 11 };
-    /// get the '2'-th row of M
-    const vec4 b = M.row(2);    // it assigns the requested row to a new vector b
-
-    /// get the '1'-th column of M
-    const vec3 c = M.col(1);    // it assigns the requested column to a new vector c
-
-    /// modify the element value at row 2 and column 1 (Note the 0-based indices)
-    M(2, 1) = b.x;
-
-    /// apply transformation M on a 3D point p (p is a 3D vector)
-    vec3 p(222, 444, 333);
-    vec3 proj = M * vec4(p, 1.0f);  // use the homogenous coordinates. result is a 3D vector
-
-    /// the length of a vector
-    float len = p.length();
-    /// the squared length of a vector
-    float sqr_len = p.length2();
-
-    /// the dot product of two vectors
-    float dot_prod = dot(p, proj);
-
-    /// the cross product of two vectors
-    vec3 cross_prod = cross(p, proj);
-
-    /// normalize this vector
-    cross_prod.normalize();
-
-    /// a 3 by 3 matrix (all entries are intentionally NOT initialized for efficiency reasons)
-    //mat3 F;
-    /// ... here you compute or initialize F.
-    /// compute the inverse of K
-    //mat3 invF = inverse(F);
-
-    /// ----------- dynamic-size matrices
-
-    /// define a non-fixed size matrix
-    Matrix<double> W(2, 3, 0.0); // all entries initialized to 0.0.
-
-    /// set its first row by a 3D vector (1.1, 2.2, 3.3)
-    W.set_row({ 1.1, 2.2, 3.3 }, 0);   // here "{ 1.1, 2.2, 3.3 }" is of type 'std::vector<double>'
-
-    /// get the last column of a matrix
-    std::vector<double> last_column = W.get_column(W.cols() - 1);
-
-    // TODO: delete all above demo code in the final submission
-
-    //--------------------------------------------------------------------------------------------------------------
-    // implementation starts ...
-
-    // TODO: check if the input is valid (always good because you never known how others will call your function).
     // CHECK FOR VALIDITY INPUTS
     /*float fx, float fy,     /// input: the focal lengths (same for both cameras)
         float cx, float cy,     /// input: the principal point (same for both cameras)
@@ -263,12 +148,7 @@ bool Triangulation::triangulation(
         assert(points_1[i].size() == 3);
         assert(points_1[i][2] == 1);
     }
-
-    // TODO: Estimate relative pose of two views. This can be subdivided into
-    //      - estimate the fundamental matrix F;
-    //      - compute the essential matrix E;
-    //      - recover rotation R and t.
-
+    
     //Estimation of fundamental matrix F;
     // Normalization of points
     
@@ -278,14 +158,6 @@ bool Triangulation::triangulation(
     std::vector<vec3> Npoints_0 = points_normalize(points_0, trans_0);
     std::vector<vec3> Npoints_1 = points_normalize(points_1, trans_1);
 
-    /*
-    for (int i = 0; i < points_0.size(); i++)
-    {
-        std::cout << points_0[i] << std::endl;
-        std::cout << Npoints_0[i] << std::endl;
-        std::cout << inverse(trans_0) * Npoints_0[i] << std::endl;
-    }*/
-    //std::cout <<  Npoints_0 * trans_0  << std::endl;
 
     //Construction of W 
     //Initialize empty matrix W
@@ -303,7 +175,6 @@ bool Triangulation::triangulation(
         std::vector<double> longvec{ x1 * x2, y1 * x2, x2, x1 * y2, y1 * y2, y2, x1, y1, 1.0 };
         Wlol.set_row(longvec, i);
     }
-    //std::cout << "Normalized matrix: " << Wlol << std::endl;
 
     //Linear solution (based on SVD)
     
@@ -326,7 +197,6 @@ bool Triangulation::triangulation(
         }
     }
     
-    //F(2, 2) = 1;
     int nf = 3;
     Matrix<double> UF(nf, nf, 0.0);   // initialized with 0s
     Matrix<double> SF(nf, nf, 0.0);   // initialized with 0s
@@ -341,8 +211,6 @@ bool Triangulation::triangulation(
     //Denormalization
     F = to_mat3(FF);
     F = transpose(trans_1) * F * trans_0;
-
-    std::cout << F << std::endl;
   
     //STEP 2
 
@@ -382,8 +250,7 @@ bool Triangulation::triangulation(
 
     EE = UE * SE * transpose(VE);
 
-    //std::cout << EE << std::endl;
-
+    
     //Options of R an t
    
     Matrix<double> R1;
@@ -398,29 +265,21 @@ bool Triangulation::triangulation(
 
     t1 = UE.get_column(2);                                      //(2.9)
     t2 = -1.0* UE.get_column(2);
-    std::cout << "detR1" << r1det << "detR2" << r2det << std::endl;
-    std::cout <<"R1" << R1 << std:: endl;
-    std::cout << "R2" <<R2 << std::endl;
-    std::cout <<"t1" <<t1 << std::endl;
-    std::cout << "t2" <<t2 << std::endl;
     
-
-
     //Finding the correct relative pose
-
 
     mat3 R13 = to_mat3(R1);
     vec3 t13{ (float)t1[0], (float)t1[1], (float)t1[2] };
     mat3 R23 = to_mat3(R2);
     vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
 
-    std::cout << "R13: " << R13 << std::endl;
-    std::cout << "t13: " << t13 << std::endl;
-
+    // Get the relative poses
     mat34 R1t1 = get_pose_M(R13, t13);
     mat34 R1t2 = get_pose_M(R13, t23);
     mat34 R2t1 = get_pose_M(R23, t13);
     mat34 R2t2 = get_pose_M(R23, t23);
+
+    //count the points in front of the cameras by its pose.
 
     int count_p1 = 0;
     int count_p2 = 0;
@@ -429,9 +288,6 @@ bool Triangulation::triangulation(
 
     vec4 test_p{ points_1[0][0],points_1[0][1],points_1[0][2],1.0 };
     vec3 test_p_proj = R1t1 * test_p;
-    std::cout << "R1t1: " << R1t1 << std::endl;
-    std::cout << "test_p: " << test_p << std::endl;
-    std::cout << "test: " << test_p_proj << std::endl;
 
 
     for (int i = 0; i < points_1.size(); i++)
@@ -446,14 +302,41 @@ bool Triangulation::triangulation(
         auto p4 = R2t2 * p;
         if (p4[2] >= 0) count_p4++;
     }
+    
+    //Get the pose
 
-    std::cout << "count_p1: " << count_p1 << std::endl;
-    std::cout << "count_p2: " << count_p2 << std::endl;
-    std::cout << "count_p3: " << count_p3 << std::endl;
-    std::cout << "count_p4: " << count_p4 << std::endl;
+    mat34 RT;
+    mat3 RR;
+    vec3 tt;
 
-    mat34 Mprime = K * R1t1;
-    std::cout << "Mprime: " << Mprime << std::endl;
+    int i = std::max(std::max(std::max(count_p1, count_p2), count_p3), count_p4);
+    if (i == count_p1)
+    {
+        RT = R1t1;
+        RR = R13;
+        tt = t13;
+    }
+    else if (i == count_p2)
+    {
+        RT = R1t2;
+        RR = R13;
+        tt = t23;
+    }
+    else if (i == count_p3)
+    {
+        RT = R2t1;
+        RR = R23;
+        tt = t13;
+    }
+    else
+    {
+        RT = R2t2;
+        RR = R23;
+        tt = t23;
+    }
+    // Make the matrices M
+
+    mat34 Mprime = K * RT;
     Matrix<double> Mprimem = to_Matrix(Mprime);
 
     mat34 Mproj;
@@ -461,9 +344,9 @@ bool Triangulation::triangulation(
     Mproj.set_col(1, K.col(1));
     Mproj.set_col(2, K.col(2));
     Mproj.set_col(3, vec3{ 0,0,0 });
-    std::cout << Mproj << std::endl;
     Matrix<double> Mprojem = to_Matrix(Mproj);
 
+    //Calculate 3d points
 
     for (int i = 0; i < points_0.size(); i++) {
         Matrix<double> A(4, 4, 0.0);
@@ -484,53 +367,7 @@ bool Triangulation::triangulation(
         vec3 pt{ p[0] / p[3],p[1] / p[3], p[2] / p[3] };
         points_3d.push_back(pt);
     }
-    R = R13;
-    t = t13;
-
-    std::cout << "PP: " << points_3d << std::endl;
-
-    /*
-    // TODO: construct the P matrix (so P * m = 0).
-    const int n = 9;
-    const int m = 2 * (int)points_0.size();
-    // Construction of  Matrix P
-    Matrix<double> P(m, n, 0.0);
-    for (int i = 0; i < points_0.size(); i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            for(int k = 0 ; k < 2; k++)
-            {
-            }
-            P(4 * i+j , 3 * j) = -Mproj(i, 0);
-            P(4 * i + j, 3 * j +1) = -Mproj(i, 1);
-            P(4 * i + j, 3 * j + 2) = -Mproj(i, 2);
-            P(4 * i + j+1, 3 * j) = -Mproj(i, 0);
-            P(4 * i + j+1, 3 * j + 1) = -Mproj(i, 1);
-            P(4 * i + j+1, 3 * j + 2) = -Mproj(i, 2);
-
-
-        }
-    }
-    */
-
-    // TODO: Reconstruct 3D points. The main task is
-    //      - triangulate a pair of image points (i.e., compute the 3D coordinates for each corresponding point pair)
-
-    //mat34 M_1(1.0f);                    // M = [I 0]
-
-
-
-
-    // TODO: Don't forget to
-    //          - write your recovered 3D points into 'points_3d' (the viewer can visualize the 3D points for you);
-    //          - write the recovered relative pose into R and t (the view will be updated as seen from the 2nd camera,
-    //            which can help you to check if R and t are correct).
-    //       You must return either 'true' or 'false' to indicate whether the triangulation was successful (so the
-    //       viewer will be notified to visualize the 3D points and update the view).
-    //       However, there are a few cases you should return 'false' instead, for example:
-    //          - function not implemented yet;
-    //          - input not valid (e.g., not enough points, point numbers don't match);
-    //          - encountered failure in any step.
+    R = RR;
+    t = tt;
     return points_3d.size() > 0;
 }
