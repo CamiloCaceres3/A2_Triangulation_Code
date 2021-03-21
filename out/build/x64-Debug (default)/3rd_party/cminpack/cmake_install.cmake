@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/cminpack
+# Install script for directory: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/cminpack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,19 +33,19 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibraryx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/lib/3rd_cminpack.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/lib/3rd_cminpack.lib")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xcminpack_hdrsx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/cminpack-" TYPE FILE FILES
-    "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/cminpack/cminpack.h"
-    "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/3rd_party/cminpack/minpack.h"
+    "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/cminpack/cminpack.h"
+    "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/3rd_party/cminpack/minpack.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/cminpack/cmake/cmake_install.cmake")
+  include("C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/cminpack/cmake/cmake_install.cmake")
 
 endif()
 

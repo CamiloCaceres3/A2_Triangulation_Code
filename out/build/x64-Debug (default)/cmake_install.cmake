@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code
+# Install script for directory: C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/install/x64-Debug (default)")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/install/x64-Debug (default)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/3rd_party/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/easy3d/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/Triangulation/cmake_install.cmake")
-  include("C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares/cmake_install.cmake")
+  include("C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/3rd_party/cmake_install.cmake")
+  include("C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/easy3d/cmake_install.cmake")
+  include("C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Triangulation/cmake_install.cmake")
+  include("C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/Tutorial_NonlinearLeastSquares/cmake_install.cmake")
 
 endif()
 
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Camicace/source/repos/A1_Calibration_Code/A2_Triangulation_Code/out/build/x64-Debug (default)/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/dj_do/OneDrive/GEOMATICS/GEO1016 Photogrammetry/Assignments/A2_collab_working/out/build/x64-Debug (default)/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

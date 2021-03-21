@@ -88,7 +88,47 @@ mat34 get_pose_M(mat3 R, vec3 t) {
     Rt.set_col(3, t);
     return Rt;
 }
+// Triangulate 
+vec3 triangulate(vec3 pt1, vec3 pt2, Matrix<double>& Mproj, Matrix<double>& Mprime)
+{
+    Matrix<double> A(4, 4, 0.0);
+    std::vector<double> s1 = (pt1[0] * Mproj.get_row(2) - Mproj.get_row(0));
+    std::vector<double> s2 = (pt1[1] * Mproj.get_row(2) - Mproj.get_row(1));
+    std::vector<double> s3 = (pt2[0] * Mprime.get_row(2) - Mprime.get_row(0));
+    std::vector<double> s4 = (pt2[1] * Mprime.get_row(2) - Mprime.get_row(1));
+    A.set_row({ s1[0],s1[1],s1[2],s1[3] }, 0);
+    A.set_row({ s2[0],s2[1],s2[2],s2[3] }, 1);
+    A.set_row({ s3[0],s3[1],s3[2],s3[3] }, 2);
+    A.set_row({ s4[0],s4[1],s4[2],s4[3] }, 3);
+    Matrix<double> AU(4, 4, 0.0);
+    Matrix<double> AS(4, 4, 0.0);
+    Matrix<double> AV(4, 4, 0.0);
+    svd_decompose(A, AU, AS, AV);
+    vec4 p{ (float)AV(0,3), (float)AV(1,3), (float)AV(2,3), (float)AV(3,3) };
+    vec3 pt{ p[0] / p[3],p[1] / p[3], p[2] / p[3] };
+    return pt;
+}
 
+// Check if pose is correct
+bool is_correct_pose(mat34& Rt, std::vector<vec3> points_0, std::vector<vec3> points_1, Matrix<double>& Mproj, Matrix<double>& Mprime)
+{
+    int count_c1 = 0;
+    int count_c2 = 0;
+    int max_count_c1 = points_0.size();
+    int max_count_c2 = points_1.size();
+    for (int i = 0; i < points_0.size(); i++) {
+        vec3 pt1 = points_0[i];
+        vec3 pt2 = points_1[i];
+        vec3 P_c1 = triangulate(pt1, pt2, Mproj, Mprime);
+        // Check for camera 1
+        if (P_c1[2] > 0.0) count_c1++;
+        // Check for camera 2 (transform point)
+        vec4 P2{ P_c1[0],P_c1[1],P_c1[2],1.0 };
+        vec3 P_c2 = Rt * P2;
+        if (P_c2[2] > 0.0) count_c2++;
+    }
+    return ((count_c1 == max_count_c1) && (count_c2 == max_count_c2));
+}
 
 /// convert a 3 by 3 matrix of type 'Matrix<double>' to mat3
 mat3 to_mat3(Matrix<double>& M) {
@@ -114,6 +154,68 @@ Matrix<double> to_Matrix(const mat& M) {
     return result;
 }
 
+// Construct M
+Matrix<double> Mproj(mat3& K)
+{
+    mat34 M;
+    M.set_col(0, K.col(0));
+    M.set_col(1, K.col(1));
+    M.set_col(2, K.col(2));
+    M.set_col(3, vec3{ 0,0,0 });
+    Matrix<double> Mproj = to_Matrix(M);
+    return Mproj;
+}
+
+// Construct M'
+Matrix<double> Mprime(mat3& K, mat34 RT)
+{
+    mat34 M = K * RT;
+    Matrix<double> Mprime = to_Matrix(M);
+    return Mprime;
+}
+
+// Recover correct pose: RT, R & t
+void recover_correct_pose(mat34 poses[], mat3& K, mat34& RT, mat3& R, vec3& t,
+                          std::vector<vec3> points_0, std::vector<vec3> points_1,
+                           mat3& R13, mat3& R23, vec3& t13, vec3& t23)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        if (is_correct_pose(poses[i], points_0, points_1, Mproj(K), Mprime(K, poses[i]))) {
+            RT = poses[i];
+            if (i == 0) {
+                R = R13;
+                t = t13;
+            }
+            else if (i == 1) {
+                R = R13;
+                t = t23;
+            }
+            else if (i == 2) {
+                R = R23;
+                t = t13;
+            }
+            else if (i == 3) {
+                R = R23;
+                t = t23;
+            }
+
+        }
+    }
+}
+
+void calc_3d_points(std::vector<vec3>& points_3d, std::vector<vec3> points_0, std::vector<vec3> points_1, mat3& K, mat34& RT)
+{
+    for (int i = 0; i < points_0.size(); i++)
+    {
+        vec3 pt1 = points_0[i];
+        vec3 pt2 = points_1[i];
+        Matrix<double> M = Mproj(K);
+        Matrix<double> Mp = Mprime(K, RT);
+        vec3 P = triangulate(pt1, pt2, M, Mp);
+        points_3d.push_back(P);
+    }
+}
 
 /**
  * TODO: Finish this function for reconstructing 3D geometry from corresponding image points.
@@ -149,7 +251,9 @@ bool Triangulation::triangulation(
         assert(points_1[i][2] == 1);
     }
     
-    //Estimation of fundamental matrix F;
+
+    // STEP 1
+    // Estimation of fundamental matrix F;
     // Normalization of points
     
     mat3 trans_0;
@@ -158,13 +262,9 @@ bool Triangulation::triangulation(
     std::vector<vec3> Npoints_0 = points_normalize(points_0, trans_0);
     std::vector<vec3> Npoints_1 = points_normalize(points_1, trans_1);
 
-
     //Construction of W 
     //Initialize empty matrix W
     Matrix<double> Wlol(Npoints_0.size(), 9, 0.0);
-
-    //std::vector<vec3> points_1scaled;
-
 
     for (int i = 0; i < Npoints_0.size(); i++)
     {
@@ -212,9 +312,8 @@ bool Triangulation::triangulation(
     F = to_mat3(FF);
     F = transpose(trans_1) * F * trans_0;
   
-    //STEP 2
-
-   //Find the 4 relative poses 
+    //STEP 2 RECOVER RELATIVE POSE
+    //Find the 4 candidate relative poses 
 
     //Compute matrix E = KtFK
 
@@ -273,101 +372,24 @@ bool Triangulation::triangulation(
     mat3 R23 = to_mat3(R2);
     vec3 t23{ (float)t2[0], (float)t2[1], (float)t2[2] };
 
+
     // Get the relative poses
-    mat34 R1t1 = get_pose_M(R13, t13);
-    mat34 R1t2 = get_pose_M(R13, t23);
-    mat34 R2t1 = get_pose_M(R23, t13);
-    mat34 R2t2 = get_pose_M(R23, t23);
-
-    //count the points in front of the cameras by its pose.
-
-    int count_p1 = 0;
-    int count_p2 = 0;
-    int count_p3 = 0;
-    int count_p4 = 0;
-
-    vec4 test_p{ points_1[0][0],points_1[0][1],points_1[0][2],1.0 };
-    vec3 test_p_proj = R1t1 * test_p;
-
-
-    for (int i = 0; i < points_1.size(); i++)
-    {
-        vec4 p{ Npoints_1[i][0],Npoints_1[i][1],Npoints_1[i][2],1.0f };
-        auto p1 = R1t1 * p;
-        if (p1[2] >= 0) count_p1++;
-        auto p2 = R1t2 * p;
-        if (p2[2] >= 0) count_p2++;
-        auto p3 = R2t1 * p;
-        if (p3[2] >= 0) count_p3++;
-        auto p4 = R2t2 * p;
-        if (p4[2] >= 0) count_p4++;
-    }
+    mat34 R1t1 = get_pose_M(R13, t13); // Pose 1
+    mat34 R1t2 = get_pose_M(R13, t23); // Pose 2
+    mat34 R2t1 = get_pose_M(R23, t13); // Pose 3
+    mat34 R2t2 = get_pose_M(R23, t23); // Pose 4
     
-    //Get the pose
+    mat34 poses[] = { R1t1, R1t2, R2t1, R2t2 };
 
-    mat34 RT;
-    mat3 RR;
-    vec3 tt;
+    // STEP 3 DETERMINE THE 3D COORDINATES
+    //The correct pose
+    mat34 RT; //initialize RT
+    //Following function will retrieve R & T from correct pose
+    recover_correct_pose(poses, K, RT, R, t, points_0, points_1,R13,R23,t13,t23);
+    
+    // Calculate 3d points
+    // based on SVD for all image points
+    calc_3d_points(points_3d, points_0, points_1, K, RT);
 
-    int i = std::max(std::max(std::max(count_p1, count_p2), count_p3), count_p4);
-    if (i == count_p1)
-    {
-        RT = R1t1;
-        RR = R13;
-        tt = t13;
-    }
-    else if (i == count_p2)
-    {
-        RT = R1t2;
-        RR = R13;
-        tt = t23;
-    }
-    else if (i == count_p3)
-    {
-        RT = R2t1;
-        RR = R23;
-        tt = t13;
-    }
-    else
-    {
-        RT = R2t2;
-        RR = R23;
-        tt = t23;
-    }
-    // Make the matrices M
-
-    mat34 Mprime = K * RT;
-    Matrix<double> Mprimem = to_Matrix(Mprime);
-
-    mat34 Mproj;
-    Mproj.set_col(0, K.col(0));
-    Mproj.set_col(1, K.col(1));
-    Mproj.set_col(2, K.col(2));
-    Mproj.set_col(3, vec3{ 0,0,0 });
-    Matrix<double> Mprojem = to_Matrix(Mproj);
-
-    //Calculate 3d points
-
-    for (int i = 0; i < points_0.size(); i++) {
-        Matrix<double> A(4, 4, 0.0);
-        
-        std::vector<double> s1 = (points_0[i][0] * Mprojem.get_row(2) - Mprojem.get_row(0));
-        std::vector<double> s2 = (points_0[i][1] * Mprojem.get_row(2) - Mprojem.get_row(1));
-        std::vector<double> s3 = (points_1[i][0] * Mprimem.get_row(2) - Mprimem.get_row(0));
-        std::vector<double> s4 = (points_1[i][1] * Mprimem.get_row(2) - Mprimem.get_row(1));
-        A.set_row({s1[0],s1[1],s1[2],s1[3]}, 0);
-        A.set_row({ s2[0],s2[1],s2[2],s2[3] }, 1);
-        A.set_row({ s3[0],s3[1],s3[2],s3[3] }, 2);
-        A.set_row({ s4[0],s4[1],s4[2],s4[3] }, 3);
-        Matrix<double> AU(4,4,0.0);
-        Matrix<double> AS(4,4,0.0);
-        Matrix<double> AV(4,4,0.0);
-        svd_decompose(A, AU, AS, AV);
-        vec4 p{ (float) AV(0,3), (float) AV(1,3), (float)AV(2,3), (float) AV(3,3) };
-        vec3 pt{ p[0] / p[3],p[1] / p[3], p[2] / p[3] };
-        points_3d.push_back(pt);
-    }
-    R = RR;
-    t = tt;
     return points_3d.size() > 0;
 }
