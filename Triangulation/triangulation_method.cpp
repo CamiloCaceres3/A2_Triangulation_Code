@@ -384,7 +384,7 @@ bool Triangulation::triangulation(
     // STEP 3 DETERMINE THE 3D COORDINATES
     //The correct pose
     mat34 RT; //initialize RT
-    //Following function will retrieve R & T from correct pose
+    //Following function will retrieve correct pose, along with R & T 
     recover_correct_pose(poses, K, RT, R, t, points_0, points_1,R13,R23,t13,t23);
     
     // Calculate 3d points
