@@ -318,7 +318,7 @@ bool Triangulation::triangulation(
     //Compute matrix E = KtFK
 
     // Matrix K
-    mat3 K { fx,1.0,cx,
+    mat3 K { fx,0.0,cx,
               0.0,fy,cy,
               0.0,0.0,1.0 };
 
@@ -326,11 +326,11 @@ bool Triangulation::triangulation(
 
     E = transpose(K) * F * K; //(2.1) 
 
-    mat3 WW{ 0.0,-1.0, 0.0, //(2.2)
+    mat3 WW{ 0.0,-1.0, 0.0, //(2.3)
             1.0,0.0,0.0,
             0.0,0.0,1.0 };
 
-    mat3 ZZ{ 0.0,1.0, 0.0, //(2.2)
+    mat3 ZZ{ 0.0,1.0, 0.0, //(2.3)
             -1.0,0.0,0.0,
             0.0,0.0,0.0 };
 
@@ -386,10 +386,14 @@ bool Triangulation::triangulation(
     mat34 RT; //initialize RT
     //Following function will retrieve correct pose, along with R & T 
     recover_correct_pose(poses, K, RT, R, t, points_0, points_1,R13,R23,t13,t23);
-    
+    std::cout << "R1: " << R13 << std::endl;
+    std::cout << "R2: " << R23 << std::endl;
+    std::cout << "t1: " << t13 << std::endl;
+    std::cout << "t2: " << t23 << std::endl;
+
     // Calculate 3d points
     // based on SVD for all image points
     calc_3d_points(points_3d, points_0, points_1, K, RT);
 
-    return points_3d.size() > 0;
+    return (points_3d.size() > 0);
 }

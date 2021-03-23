@@ -1456,7 +1456,7 @@ namespace easy3d {
 
 		fbo.release();
 
-#if 1
+#if 0
 		// also saves the camera parameters
 		std::ofstream output(file_name + ".camera");
 		output << "position:      " << camera_->position() << std::endl;
