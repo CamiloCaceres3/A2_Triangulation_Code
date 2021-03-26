@@ -89,7 +89,7 @@ mat34 get_pose_M(mat3 R, vec3 t) {
     return Rt;
 }
 // Triangulate 
-vec3 triangulate(vec3 pt1, vec3 pt2, Matrix<double>& Mproj, Matrix<double>& Mprime)
+vec3 triangulate(vec3 pt1, vec3 pt2, const Matrix<double>& Mproj, const Matrix<double>& Mprime)
 {
     Matrix<double> A(4, 4, 0.0);
     std::vector<double> s1 = (pt1[0] * Mproj.get_row(2) - Mproj.get_row(0));
@@ -110,7 +110,7 @@ vec3 triangulate(vec3 pt1, vec3 pt2, Matrix<double>& Mproj, Matrix<double>& Mpri
 }
 
 // Check if pose is correct
-bool is_correct_pose(mat34& Rt, std::vector<vec3> points_0, std::vector<vec3> points_1, Matrix<double>& Mproj, Matrix<double>& Mprime)
+bool is_correct_pose(mat34& Rt, std::vector<vec3> points_0, std::vector<vec3> points_1, const Matrix<double>& Mproj, const Matrix<double>& Mprime)
 {
     int count_c1 = 0;
     int count_c2 = 0;
