@@ -175,8 +175,8 @@ Matrix<double> Mprime(mat3& K, mat34 RT)
 }
 
 // Recover correct pose: RT, R & t
-void recover_correct_pose(mat34 poses[], mat3& K, mat34& RT, mat3& R, vec3& t,
-                          std::vector<vec3> points_0, std::vector<vec3> points_1,
+void recover_correct_pose(mat34 poses[], mat3& K, mat34& RT, mat3& R, vec3& t,  const
+                          std::vector<vec3> points_0, const std::vector<vec3> points_1,
                            mat3& R13, mat3& R23, vec3& t13, vec3& t23)
 {
     for (int i = 0; i < 4; i++)
